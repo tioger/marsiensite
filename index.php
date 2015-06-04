@@ -64,7 +64,6 @@ $erreur = 'Au moins un des champs est vide.';
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/login.css" type="text/css" />
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -686,10 +685,5 @@ $erreur = 'Au moins un des champs est vide.';
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
-   
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js
-"></script>
-<script src="js/login.js" ></script>
-    
 </body>
 </html>

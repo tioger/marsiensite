@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/login.css" type="text/css" />
 <header id="header">
         <div class="top-bar">
             <div class="container">
@@ -73,3 +74,7 @@
         </nav><!--/nav-->
 		
     </header><!--/header-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js
+"></script>
+<script src="js/login.js" ></script>
+    
