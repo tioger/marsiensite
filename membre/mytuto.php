@@ -7,7 +7,7 @@
     ?>
 <!-- Debut Passage Hors Ligne des Tutos-->
 <?php 
-    include ("_mysql.php"); 
+    include ("../../bdd/localhostpdo/_mysql.php");
     if (isset($_POST['horsligne']) && $_POST['horsligne'] == 'Passer Hors Ligne') {
         $variableA = "";
         $variableB = $_POST['id'];
@@ -105,7 +105,7 @@
                                         <!-- Debut Boucle pour affichage des Tutos en Ligne-->
                                         
                                         <?php  
-                                          include ("_mysql.php"); 
+                                          include ("../../bdd/localhostpdo/_mysql.php"); 
                                             // On récupère tout le contenu de la table Tuto
                                             $reponse = $bdd->query('SELECT * FROM Tutos WHERE online = "online"');
                                             $modal = 0;
@@ -159,7 +159,7 @@
 
                                         <!-- Debut Boucle pour affichage des Tutos Hors Ligne-->
                                         <?php
-                                          include ("_mysql.php"); 
+                                          include ("../../bdd/localhostpdo/_mysql.php"); 
                                             // On récupère tout le contenu de la table Tuto
                                             $reponse = $bdd->query('SELECT * FROM Tutos WHERE online = ""');
 

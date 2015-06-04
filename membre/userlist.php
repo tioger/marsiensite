@@ -69,7 +69,7 @@
                         <tbody>
                           <!-- Debut Boucle pour affichage des membres-->
                           <?php  
-                            include ("_mysql.php");
+                            include ("../../bdd/localhostpdo/_mysql.php");
                              
                             // On récupère tout le contenu de la table commentary
                             $reponse = $bdd->query("SELECT * FROM membre ORDER BY ID ");

@@ -98,7 +98,7 @@
                                         <?php 
                                             
                                             if(isset($_POST['requete']) && $_POST['requete'] != NULL){
-                                                include '_mysql.php';
+                                                include ("../../bdd/localhostpdo/_mysql.php");
                                                 $search = htmlspecialchars($_POST['requete']);
                                                 $req = $bdd->query("SELECT * FROM Tutos WHERE name OR shortdescrib LIKE '%$search%' ORDER BY id DESC");
                                                 $count = $req->fetchAll(PDO::FETCH_ASSOC);

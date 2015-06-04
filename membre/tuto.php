@@ -106,7 +106,7 @@
                                         <!-- Debut Boucle pour affichage des derniers Tutos -->
 
                                         <?php  
-                                           include ("_mysql.php"); 
+                                           include ("../../bdd/localhostpdo/_mysql.php"); 
                                             // On récupère tout le contenu de la table Tuto
                                             $reponse = $bdd->query('SELECT * FROM Tutos WHERE online = "online" ORDER BY ID DESC LIMIT 0, 5');
 
@@ -135,7 +135,7 @@
                                         <h3>Tutos Html+Css</h3>
                                         <!-- Debut Boucle pour affichage des Tutos htmlcss-->
                                         <?php  
-                                           include ("_mysql.php"); 
+                                           include ("../../bdd/localhostpdo/_mysql.php");
                                             // On récupère tout le contenu de la table Tuto
                                             $reponse = $bdd->query('SELECT * FROM Tutos WHERE online = "online" AND language = "HtmlCss"');
 
@@ -164,7 +164,7 @@
                                         <h3>Tous Nos Tutos</h3>
                                         <!-- Debut Boucle pour affichage de tous les Tutos en ligne-->
                                         <?php  
-                                           include ("_mysql.php"); 
+                                           include ("../../bdd/localhostpdo/_mysql.php"); 
                                             // On récupère tout le contenu de la table Tuto
                                             $reponse = $bdd->query('SELECT * FROM Tutos WHERE online="online"');
 
@@ -193,7 +193,7 @@
                                          <h3>Tutos C</h3>
                                          <!-- Debut Boucle pour affichage des Tutos C-->
                                         <?php  
-                                           include ("_mysql.php"); 
+                                           include ("../../bdd/localhostpdo/_mysql.php"); 
                                             // On récupère tout le contenu de la table Tuto
                                             $reponse = $bdd->query('SELECT * FROM Tutos WHERE online = "online" AND language = "C"');
 
@@ -222,7 +222,7 @@
                                          <h3>Tutos C++</h3>
                                          <!-- Debut Boucle pour affichage des Tutos C++-->
                                         <?php  
-                                           include ("_mysql.php"); 
+                                           include ("../../bdd/localhostpdo/_mysql.php"); 
                                             // On récupère tout le contenu de la table Tuto
                                             $reponse = $bdd->query('SELECT * FROM Tutos WHERE online = "online" AND language = "Cplusplus"');
 
@@ -251,7 +251,7 @@
                                         <h3>Tutos Javascript</h3>
                                         <!-- Debut Boucle pour affichage des Tutos Js-->
                                         <?php  
-                                           include ("_mysql.php"); 
+                                           include ("../../bdd/localhostpdo/_mysql.php"); 
                                             // On récupère tout le contenu de la table Tuto
                                             $reponse = $bdd->query('SELECT * FROM Tutos WHERE online = "online" AND language = "Javascript"');
 
@@ -280,7 +280,7 @@
                                         <h3>Tutos Jquery</h3>
                                         <!-- Debut Boucle pour affichage des Tutos Jquery-->
                                         <?php  
-                                           include ("_mysql.php"); 
+                                           include ("../../bdd/localhostpdo/_mysql.php"); 
                                             // On récupère tout le contenu de la table Tuto
                                             $reponse = $bdd->query('SELECT * FROM Tutos WHERE online = "online" AND language = "Jquery"');
 
@@ -309,7 +309,7 @@
                                         <h3>Tutos PHP</h3>
                                         <!-- Debut Boucle pour affichage des Tutos PHP-->
                                         <?php  
-                                           include ("_mysql.php"); 
+                                           include ("../../bdd/localhostpdo/_mysql.php"); 
                                             // On récupère tout le contenu de la table Tuto
                                             $reponse = $bdd->query('SELECT * FROM Tutos WHERE online = "online" AND language = "PHP"');
 
@@ -338,7 +338,7 @@
                                         <h3>Tutos Python</h3>
                                         <!-- Debut Boucle pour affichage des Tutos Python-->
                                         <?php  
-                                           include ("_mysql.php"); 
+                                           include ("../../bdd/localhostpdo/_mysql.php"); 
                                             // On récupère tout le contenu de la table Tuto
                                             $reponse = $bdd->query('SELECT * FROM Tutos WHERE online = "online" AND language = "Python"');
 
@@ -367,7 +367,7 @@
                                         <h3>Tutos Rails</h3>
                                         <!-- Debut Boucle pour affichage des Tutos rails-->
                                         <?php  
-                                           include ("_mysql.php"); 
+                                           include ("../../bdd/localhostpdo/_mysql.php"); 
                                             // On récupère tout le contenu de la table Tuto
                                             $reponse = $bdd->query('SELECT * FROM Tutos WHERE online = "online" AND language = "RubyonRails"');
 
@@ -396,7 +396,7 @@
                                         <h3>Tutos Ruby</h3>
                                         <!-- Debut Boucle pour affichage des Tutos Ruby-->
                                         <?php  
-                                           include ("_mysql.php"); 
+                                           include ("../../bdd/localhostpdo/_mysql.php"); 
                                             // On récupère tout le contenu de la table Tuto
                                             $reponse = $bdd->query('SELECT * FROM Tutos WHERE online = "online" AND language = "Ruby"');
 

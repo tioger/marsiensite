@@ -65,7 +65,7 @@ if (isset($_POST['enregistrer']) && $_POST['enregistrer'] == 'Enregistrer') {
             <div class="container-fluid" style="padding-right:0px;padding-left:0px;">
                 <div id="tutocadreedit" style="border:1px black solid;border-radius: 20px 20px 20px 20px;">
                     <?php  
-                        include ("../_mysql.php");
+                        include ("../../../bdd/localhostpdo/_mysql.php");
                          
                         // On récupère tout le contenu de la table Tuto
                         $reponse = $bdd->query("SELECT * FROM Tutos WHERE id= $_GET[tuto]");
