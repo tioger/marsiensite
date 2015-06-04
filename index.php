@@ -2,39 +2,39 @@
 // test si form de connect déjà envoyé
 if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
 if ((isset($_POST['login']) && !empty($_POST['login'])) && (isset($_POST['pass']) && !empty($_POST['pass']))) {
+ include ("../bdd/localhostpdo/_mysql.php");
 
-$base = mysql_connect ('localhost', 'root', 'marsien13');
-mysql_select_db ('teammorttp', $base);
-
-// on teste si une entrée de la base contient ce couple login / pass
-$sql = 'SELECT count(*) FROM admin WHERE login="'.mysql_escape_string($_POST['login']).'" AND pass_md5="'.mysql_escape_string(md5($_POST['pass'])).'"';
-$req = mysql_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
-$data = mysql_fetch_array($req);
-
-mysql_free_result($req);
-
-
-// si on obtient une réponse, alors l'utilisateur est un membre
-if ($data[0] == 1) {
-session_start();
-$_SESSION['login'] = $_POST['login'];
-$_SESSION['admin'] = 'admin';
-header('Location: membre/membre.php');
-exit();
-}
-// si on ne trouve aucune réponse, le visiteur s'est trompé soit dans son login, soit dans son mot de passe
-elseif ($data[0] == 0) {
-  $sql = 'SELECT count(*) FROM membre WHERE login="'.mysql_escape_string($_POST['login']).'" AND pass_md5="'.mysql_escape_string(md5($_POST['pass'])).'"';
-  $req = mysql_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
-  $data = mysql_fetch_array($req);
-
-  mysql_free_result($req);
-  mysql_close();
+  // on teste si une entrée de la base contient ce couple login / pass
   
-  if ($data[0] == 1) {
+  
+  $pass = md5($_POST['pass']);
+  $log = $_POST['login'];
+  $sql = "SELECT * FROM admin WHERE login = ? AND pass_md5 = ?";
+  $req = $bdd->prepare($sql);
+  $req->execute(array($log,$pass));
+  $rows = $req->fetch(PDO::FETCH_NUM);
+
+  // si on obtient une réponse, alors l'utilisateur est un membre
+  if ( $rows[0] >= 1) {
+  session_start();
+  $_SESSION['login'] = $_POST['login'];
+  $_SESSION['admin'] = 'admin';
+  header('Location: membre/index.php');
+  exit();
+  }
+// si on ne trouve aucune réponse, le visiteur s'est trompé soit dans son login, soit dans son mot de passe
+elseif ($rows[0] == false) {
+
+  $sql2 = "SELECT * FROM membre WHERE login = ? AND pass_md5 = ?";
+  $req2 = $bdd->prepare($sql2);
+  $req2->execute(array($log,$pass));
+  $rows2 = $req2->fetch(PDO::FETCH_NUM);
+  var_dump($rows[0]);
+  var_dump($rows2[0]);
+  if ($rows2[0] >= 1) {
     session_start();
     $_SESSION['login'] = $_POST['login'];
-    header('Location: membre/membre.php');
+    header('Location: membre/index.php');
     exit();
   }
 }

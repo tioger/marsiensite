@@ -66,6 +66,11 @@
                                        <input class="btn-primary" name="connexion" type="submit" value="Connexion" />
                                     </fieldset>
                                 </form>
+                                <p id="errormsg">
+                                    <?php
+                                        if (isset($erreur)) echo '<br /><br />',$erreur;
+                                    ?>
+                                </p>
                             </div>
                         </li>                       
                     </ul>

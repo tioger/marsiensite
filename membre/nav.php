@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="membre.php">Marsien Dashboard</a>
+                <a class="navbar-brand" href="index.php">Marsien Dashboard</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -33,7 +33,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li >
-                        <a href="membre.php"><i class="fa fa-fw fa-table"></i> Calendrier</a>
+                        <a href="index.php"><i class="fa fa-fw fa-table"></i> Calendrier</a>
                     </li>
                     <li>
                         <a href="<?php echo htmlentities(trim($_SESSION['login'])); ?>/" target="_blank"><i class="fa fa-fw fa-desktop"></i> Ma Page</a>
