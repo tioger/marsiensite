@@ -2,17 +2,13 @@
 // test si form de connect déjà envoyé
 if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
 if ((isset($_POST['login']) && !empty($_POST['login'])) && (isset($_POST['pass']) && !empty($_POST['pass']))) {
+  include ("../../bdd/localhostpdo/_mysql.php");
 
-$base = mysql_connect ('localhost', 'root', 'marsien13');
-mysql_select_db ('teammorttp', $base);
-
-// on teste si une entrée de la base contient ce couple login / pass
-$sql = 'SELECT count(*) FROM admin WHERE login="'.mysql_escape_string($_POST['login']).'" AND pass_md5="'.mysql_escape_string(md5($_POST['pass'])).'"';
-$req = mysql_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
-$data = mysql_fetch_array($req);
-
-mysql_free_result($req);
-
+  // on teste si une entrée de la base contient ce couple login / pass
+  $req = $bdd->prepare('SELECT count(*) FROM admin WHERE login = ? AND pass_md5 = ?');
+  $pass = md5($_POST['pass']);
+  $req->execute(array($_POST['login'], $pass));
+  $data = $req->execute();
 
 // si on obtient une réponse, alors l'utilisateur est un membre
 if ($data[0] == 1) {
