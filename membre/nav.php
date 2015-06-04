@@ -33,6 +33,9 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li >
+                        <a href="../index.php"><i class="fa fa-fw fa-globe"></i> Retour au Site</a>
+                    </li>
+                    <li >
                         <a href="index.php"><i class="fa fa-fw fa-table"></i> Calendrier</a>
                     </li>
                     <li>
