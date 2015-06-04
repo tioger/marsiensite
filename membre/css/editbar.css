@@ -1,0 +1,186 @@
+#bartutotemp{
+  height: 40px;
+  border-bottom: 1px solid #000;
+  border-radius: 20px 20px 0px 0px;
+  background-color: #0184FF;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 6px;
+  text-align: center;
+}
+#titletutotemp{
+  margin: auto;
+  text-align: center;
+  display: inline;
+  font-size: 18px;
+  margin-right: -260px;
+}
+#edit{
+  float: right;
+  margin-top: 7.8px;
+}
+#author{
+  float:right;
+  margin-top: 9px;
+  margin-right: 20px;
+}
+.btnedit {
+  background: #a5d0ed;
+  background-image: -webkit-linear-gradient(top, #a5d0ed, #0184FF);
+  background-image: -moz-linear-gradient(top, #a5d0ed, #0184FF);
+  background-image: -ms-linear-gradient(top, #a5d0ed, #0184FF);
+  background-image: -o-linear-gradient(top, #a5d0ed, #0184FF);
+  background-image: linear-gradient(to bottom, #a5d0ed, #0184FF);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 20px 20px 0 0;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+}
+
+.btnedit:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+.btndelete {
+  background: #a5d0ed;
+  background-image: -webkit-linear-gradient(top, #a5d0ed, #0184FF);
+  background-image: -moz-linear-gradient(top, #a5d0ed, #0184FF);
+  background-image: -ms-linear-gradient(top, #a5d0ed, #0184FF);
+  background-image: -o-linear-gradient(top, #a5d0ed, #0184FF);
+  background-image: linear-gradient(to bottom, #a5d0ed, #0184FF);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 20px 20px 0 0;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+}
+
+.btndelete:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+#delete{
+  float: right;
+  margin-top: 7.8px;
+}
+
+#centerbar{
+  height: 40px;
+  border-bottom: 1px solid #000;
+  border-radius: 0px 0px 0px 0px;
+  background-color: #0184FF;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 6px;
+  text-align: center;
+}
+.comment{
+  border:black solid 1px;
+  border-radius: 20px;
+}
+.clear{
+  clear: both;
+}
+#addcombar{
+  height: 40px;
+  border-bottom: 1px solid #000;
+  background-color: #0184FF;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 6px;
+  text-align: center;
+}
+#contenttuto{
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.footeredit{
+  width: 175px;
+  margin: auto;
+}
+#tutocadreedit{
+  height:100%;
+}
+#cke_1_contents{
+  height: 73% !important;
+}
+#footbar{
+  height: 40px;
+  border-bottom: 1px solid #000;
+  border-radius: 0px 0px 20px 20px;
+  background-color: #0184FF;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 6px;
+  text-align: center;
+}
+
+#comment{
+  margin-left: 12%;
+  width: 76%;
+}
+#ajoutcom{
+  margin-left: 45%;
+  width: 10%;
+}
+#deletecom{
+  float: right;
+  padding-right: 20px;
+  margin-bottom: 30px;
+}
+.btndeletecom {
+  background: #a5d0ed;
+  background-image: -webkit-linear-gradient(top, #a5d0ed, #0184FF);
+  background-image: -moz-linear-gradient(top, #a5d0ed, #0184FF);
+  background-image: -ms-linear-gradient(top, #a5d0ed, #0184FF);
+  background-image: -o-linear-gradient(top, #a5d0ed, #0184FF);
+  background-image: linear-gradient(to bottom, #a5d0ed, #0184FF);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 20px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+}
+
+.btndeletecom:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+.authorcom{
+  margin-left: 10px;
+  border-bottom: 1px black solid;
+  margin-right: 10px;
+  padding-left: 10px;
+  margin-top: 5px;
+  padding-bottom: 5px;
+}
+.contentcom{
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-right: 240px;
+}

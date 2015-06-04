@@ -1,0 +1,152 @@
+.languagediv{
+  width: 100%;
+  padding:5px;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  float:left;
+}
+.languagediv h3{
+    text-align: center;
+}
+#menu_tuto{
+  width::100%;
+}
+.btnaddtuto {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  background: #0184FF;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-bottom:5px;
+}
+
+.btnaddtuto:hover {
+  background: #279ee8;
+  text-decoration: none;
+}
+#bloc_filtr{
+  display:block;
+  margin-top: 18px;
+}
+#bloc_filtr li{
+  display:inline-block;
+}
+.mtuto{
+  background-color:#000;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  margin-right:0.5%;
+  color:#fff;
+  cursor:pointer;
+}
+.mtuto:hover{
+  background-color:#0d5875;
+}
+#sheafiltr{
+  float:right;
+}
+.marginsearch{
+  margin-top: -10px;
+}
+.paddingsearch{
+  padding:0 !important;
+}
+#tutocadre > .clear {
+  clear: both;
+  height: 0; overflow: hidden; /* Précaution pour IE 7 */
+}
+#tutocadre{
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 4px;
+  padding: 10px;
+  background-color: rgb(221, 221, 221);
+  margin-top: 20px;
+}
+
+#tutocadre a{
+  
+}
+#HtmlCss {
+  background-image:url(../img/html5_css3.png);
+  width:100px;
+  height: 100px;
+  background-size: 100% 100%;
+  float: right;
+  margin-top: -58px;
+}
+#C {
+  background-image:url(../img/c.gif);
+  width:100px;
+  height: 100px;
+  background-size: 100% 100%;
+  float: right;
+  margin-top: -58px;
+}
+#Cplusplus {
+  background-image:url(../img/c++.png);
+  width:100px;
+  height: 100px;
+  background-size: 100% 100%;
+  float: right;
+  margin-top: -58px;
+}
+#Javascript {
+  background-image:url(../img/js.png);
+  width:100px;
+  height: 100px;
+  background-size: 100% 100%;
+  float: right;
+  margin-top: -58px;
+}
+#Jquery {
+  background-image:url(../img/jquery.png);
+  width:100px;
+  height: 100px;
+  background-size: 100% 100%;
+  float: right;
+  margin-top: -58px;
+}
+#PHP {
+  background-image:url(../img/php.jpeg);
+  width:100px;
+  height: 100px;
+  background-size: 100% 100%;
+  float: right;
+  margin-top: -58px;
+}
+#Python {
+  background-image:url(../img/python.png);
+  width:100px;
+  height: 100px;
+  background-size: 100% 100%;
+  float: right;
+  margin-top: -58px;
+}
+#Ruby {
+  background-image:url(../img/ruby.png);
+  width:100px;
+  height: 100px;
+  background-size: 100% 100%;
+  float: right;
+  margin-top: -58px;
+}
+#RubyonRails {
+  background-image:url(../img/rails.jpg);
+  width:100px;
+  height: 100px;
+  background-size: 100% 100%;
+  float: right;
+  margin-top: -58px;
+}
+.underline {
+  text-decoration:underline;
+}
+.shortdescribmargin{
+  margin-left: 130px;
+}

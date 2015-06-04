@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8"/>
+            <title></title>
+            <link rel="shortcut icon" type="image/x-icon" href="">
+            <link rel="stylesheet" type="text/css" href="">
+            <script type="text/javascript" src="scripts/shCore.js"></script>
+        <script type="text/javascript" src="scripts/shBrushJScript.js"></script>
+        <link type="text/css" rel="stylesheet" href="styles/shCoreDefault.css"/>
+        <script type="text/javascript">SyntaxHighlighter.all();</script>
+            <STYLE TYPE="text/css">
+            html, body{
+            	width:100%;
+            }
+            h1{
+            	text-align:center;
+            }
+            h4{
+            	margin-top:50px;
+            }
+            #container{
+            	width:80%;
+            	margin:auto;
+            }
+            pre{
+            	width:100%;
+            	overflow: hidden;
+            }
+            </STYLE>
+    </head> 
+    <body>
+    	<header>
+    		<h1>Exercice JavaScript</h1>
+    	</header>
+    	<div id="container">
+<h4>Afficher une valeur numérique en chaine de caractère</h4>
+<pre class="brush: js">
+	n = 128
+	console.log(n+"");
+</pre>
+<h4>Chercher la taille d'une chaine de caractère (string) et afficher si elle est > ou < à 5 caractère</h4>
+<pre class="brush: js">
+	var fruit = "orange";
+
+	if (fruit.length > 5) {
+		console.log ("La variable a plus de 5 caractère");
+	}
+	else {
+		console.log ("La variable a moin de 5 caractère");
+	};
+</pre>
+<h4>afficher des valeurs numérique de 0 à 10</h4>
+<pre class="brush: js">
+	var total = 0; // initialiser la variable total à 0
+	var limite = 10; //limiter à 10
+
+	for (total; total <= limite; total++) { //rajouter une valeur jusqu'a atteindre 10
+    	console.log (total);
+	};
+</pre>
+<h4>afficher un tableau</h4>
+<pre class="brush: js">
+	var tableau = ["cheese", "tomate", "burger"];
+	console.log (tableau);
+</pre>
+<h4>recup que les chiffre pair</h4>
+<pre class="brush: js">
+	var monTabl = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];  // declarer mon tableau
+
+	filtred = monTabl.filter(function(number){  // nouvelle variable filtred avec declaration de la fonction
+    	return number % 2 == 0; // pour tous les multiple de deux
+	});
+	console.log (filtred); // afficher filtred
+</pre>
+<h4>rajouter "s" a la fin des élément d'un tableau</h4>
+<pre class="brush: js">
+var pet = ['dog', 'cat', 'rat'];
+pet.forEach(function(pupu){ // pet.forEach (pour tous les éléments du tableau pet) en declarant une fonction
+    console.log(pupu + "s"); // rajoute s
+}); //afficher tout les elements du tableau avec "s" a la fin
+// Ou
+var pet = ['dog', 'cat', 'rat'];
+for (i = 0; i < pet.length; i ++){ // la boucle for permet de repeter la modification pour tout les éléments du tableau
+    pet[i] = pet[i]+"s";
+};
+console.log(pet) //modifie tout les éléments du tableau en leur rajoutant "s" a la fin
+</pre>
+    	</div>
+    	<footer>
+    	</footer>
+    </body>
+</html>

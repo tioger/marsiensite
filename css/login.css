@@ -1,0 +1,40 @@
+.submenu{
+position: absolute;
+left: -20px;
+z-index: 100;
+width: 177px;
+padding: 40px 0 5px;
+border-radius: 6px;
+background-color: rgba(0, 0, 0, 0.85);
+box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.125);
+border: 0px none;
+padding: 0px;
+border-radius: 5px;
+left: 0px;
+display: none;
+}
+
+a.account {
+font-size: 14px;
+line-height: 16px;
+color: #555;
+position: absolute;
+z-index: 110;
+display: block;
+padding: 11px 0 0 20px;
+margin: -11px 0 0 -10px;
+text-decoration: none;
+background: url(icons/arrow.png) 116px 17px no-repeat;
+cursor:pointer;
+}
+
+.root{
+list-style:none;
+margin:0px;
+padding:0px;
+font-size: 14px;
+padding: 11px 0 0 0px;
+border-top:1px solid #dedede;
+}
+
+ 

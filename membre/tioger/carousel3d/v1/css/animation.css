@@ -1,0 +1,56 @@
+#wrapper{
+	width: 1200px;
+	-webkit-perspective:800;
+	margin:auto;
+}
+
+#allPlan{
+	width: 400px;
+	height: 400px;
+	margin:0 auto;
+	margin-top: 50px;
+	-webkit-transform-style: preserve-3d;
+
+	-webkit-transform: translateZ(-1899px);
+}
+
+.plan{
+	position: absolute;
+	width: 450px;
+	height: 700px;
+	text-align: center;
+	font-size: 8em;
+	color:#fff;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+@-webkit-keyframes Caroussel{
+
+	from { -webkit-transform: rotateY(0); }
+	to { -webkit-transform: rotateY(360deg); }
+}
+
+#allPlan > .p1{-webkit-transform: translateZ(1899px);}
+#allPlan > .p2{-webkit-transform: rotateY(15deg) translateZ(1899px);}
+#allPlan > .p3{-webkit-transform: rotateY(30deg) translateZ(1899px);}
+#allPlan > .p4{-webkit-transform: rotateY(45deg) translateZ(1899px);}
+#allPlan > .p5{-webkit-transform: rotateY(60deg) translateZ(1899px);}
+#allPlan > .p6{-webkit-transform: rotateY(75deg) translateZ(1899px);}
+#allPlan > .p7{-webkit-transform: rotateY(90deg) translateZ(1899px);}
+#allPlan > .p8{-webkit-transform: rotateY(105deg) translateZ(1899px);}
+#allPlan > .p9{-webkit-transform: rotateY(120deg) translateZ(1899px);}
+#allPlan > .p10{-webkit-transform: rotateY(135deg) translateZ(1899px);}
+#allPlan > .p11{-webkit-transform: rotateY(150deg) translateZ(1899px);}
+#allPlan > .p12{-webkit-transform: rotateY(165deg) translateZ(1899px);}
+#allPlan > .p13{-webkit-transform: rotateY(180deg) translateZ(1899px);}
+#allPlan > .p14{-webkit-transform: rotateY(195deg) translateZ(1899px);}
+#allPlan > .p15{-webkit-transform: rotateY(210deg) translateZ(1899px);}
+#allPlan > .p16{-webkit-transform: rotateY(225deg) translateZ(1899px);}
+#allPlan > .p17{-webkit-transform: rotateY(240deg) translateZ(1899px);}
+#allPlan > .p18{-webkit-transform: rotateY(255deg) translateZ(1899px);}
+#allPlan > .p19{-webkit-transform: rotateY(270deg) translateZ(1899px);}
+#allPlan > .p20{-webkit-transform: rotateY(285deg) translateZ(1899px);}
+#allPlan > .p21{-webkit-transform: rotateY(300deg) translateZ(1899px);}
+#allPlan > .p22{-webkit-transform: rotateY(315deg) translateZ(1899px);}
+#allPlan > .p23{-webkit-transform: rotateY(330deg) translateZ(1899px);}
+#allPlan > .p24{-webkit-transform: rotateY(345deg) translateZ(1899px);}
