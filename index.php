@@ -78,7 +78,7 @@ $erreur = 'Au moins un des champs est vide.';
 
 <body class="homepage">
 
-    <<?php include 'menu.php'; ?>
+    <?php include 'menu.php'; ?>
 
     <section id="main-slider" class="no-margin">
         <div class="carousel slide">
@@ -94,8 +94,8 @@ $erreur = 'Au moins un des champs est vide.';
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <img class="animation animated-item-1" src='img/logorender.png' height="150px" >
-                                    <h2 class="animation animated-item-2">Quand les jeunes sortent des quartiers pour apprendre à coder.</h2>
+                                    <h1 class="animation animated-item-2">SIMPLonMARS</h1>
+                                    <h2 class="animation animated-item-2">Ou quand les jeunes sortent des quartiers pour apprendre à coder.</h2>
                                     <a class="btn-slide animation animated-item-3" href="#">En Savoir Plus </a>
                                 </div>
                             </div>
@@ -688,7 +688,7 @@ $erreur = 'Au moins un des champs est vide.';
     <script src="js/wow.min.js"></script>
    
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js
-"></script>;
+"></script>
 <script src="js/login.js" ></script>
     
 </body>

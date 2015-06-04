@@ -9,10 +9,7 @@
                        <div class="social">
                             <ul class="social-share">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                <li><a href="https://twitter.com/SIMPLonMARS" target="blank"><i class="fa fa-twitter"></i></a></li>
                             </ul>
                             <div class="search">
                                 <form role="form">
@@ -40,12 +37,11 @@
 				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about-us.php">About Us</a></li>
-                        <li><a href="services.php">Services</a></li>
-                        <li><a href="portfolio.php">Portfolio</a></li>
+                        <li><a href="index.php">A propos</a></li>
+                        <li><a href="services.php">Formation</a></li>
+                        <li><a href="portfolio.php">Ecosystème</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Offres<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="blog-item.php">Blog Single</a></li>
                                 <li><a href="pricing.php">Pricing</a></li>
@@ -53,6 +49,7 @@
                                 <li><a href="shortcodes.php">Shortcodes</a></li>
                             </ul>
                         </li>
+                        <li><a href="partenaires.php">Partenaires</a></li>
                         <li><a href="blog.php">Blog</a></li> 
                         <li><a href="contact-us.php">Contact</a></li>
                         <li class="menutest" id="menu1">
