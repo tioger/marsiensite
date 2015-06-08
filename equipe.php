@@ -29,7 +29,7 @@
 <body>
 
     <?php include 'menu.php'; ?>
-	<section id="">
+	<section id="equipe">
         <div class="container">
 			<div class="team">
 				<div class="center wow fadeInDown">
@@ -37,37 +37,8 @@
 					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
 				</div>
 
-				<div class="row clearfix">
-					<div class="col-md-3 col-sm-4">	
-						<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-							<div class="media">
-								<div class="pull-left blc-img-prof">
-									<a href="#"><img class="media-object" src="img/rodolphe.jpg" width="328" alt=""></a>
-								</div>
-								<div class="media-body">
-									<h4>Rodolphe</h4>
-									<h5>Formateur & jeune à la retraite</h5>
-									<ul class="tag clearfix">
-										<li class="btn"><a href="#">Web</a></li>
-										<li class="btn"><a href="#">Ui</a></li>
-										<li class="btn"><a href="#">Ux</a></li>
-										<li class="btn"><a href="#">Photoshop</a></li>
-									</ul>
-									
-									<ul class="social_icons">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li> 
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								</div>
-							</div><!--/.media -->
-							<p>un mec parfait avec plein de défauts..... je suis iremplacablement inutile a la société ...
-Rodolphe est une personnification de la puissance.</p>
-						</div>
-					</div><!--/.col-lg-4 -->
-					
-					
-					<div class="col-md-3 col-sm-4">	
+				<div class="row clearfix">	
+					<div class="col-md-4 col-sm-4">	
 						<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
 							<div class="media">
 								<div class="pull-left blc-img-prof">
@@ -95,35 +66,7 @@ Rodolphe est une personnification de la puissance.</p>
 					</div><!--/.col-lg-4 -->	
 
 
-					<div class="col-md-3 col-sm-4">	
-						<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-							<div class="media">
-								<div class="pull-left blc-img-prof">
-									<a href="#"><img class="media-object" src="img/rodolphe.jpg" width="328" alt=""></a>
-								</div>
-								<div class="media-body">
-									<h4>Rodolphe</h4>
-									<h5>Formateur & jeune à la retraite</h5>
-									<ul class="tag clearfix">
-										<li class="btn"><a href="#">Web</a></li>
-										<li class="btn"><a href="#">Ui</a></li>
-										<li class="btn"><a href="#">Ux</a></li>
-										<li class="btn"><a href="#">Photoshop</a></li>
-									</ul>
-									<ul class="social_icons">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li> 
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								</div>
-							</div><!--/.media -->
-							<p>un mec parfait avec plein de défauts..... je suis iremplacablement inutile a la société ...
-Rodolphe est une personnification de la puissance.</p>
-						</div>
-					</div><!--/.col-lg-4 -->	
-
-
-					<div class="col-md-3 col-sm-4">	
+					<div class="col-md-4 col-sm-4 col-md-offset-2">	
 						<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
 							<div class="media">
 								<div class="pull-left blc-img-prof">

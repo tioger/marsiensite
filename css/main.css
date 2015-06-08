@@ -1010,6 +1010,13 @@ a.accordion-toggle  i{
 .contact-info{
   color:#000;
 }
+/******************
+ Equipe page css
+ ******************/
+
+#equipe .team .col-md-4{
+  margin-top: 20px;
+}
 
 /*************************
 ********* About Us Page CSS ******
@@ -1273,33 +1280,33 @@ ul.social_icons li  a i{
 .team-bar .first-one-arrow {
   float: left;
   margin-right: 30px;
-  width: 2%;
+  width: 3%;
 }
 
 .team-bar .first-arrow {
   float: left;
   margin-left: 5px;
   margin-right: 35px;
-  width: 22%;
+  width: 14%;
 }
 
 .team-bar .second-arrow {
   float: left;
   margin-left: 5px;
-  width: 21%;
+  width: 29.5%;
 }
 
 .team-bar .third-arrow {
   float: left;
   margin-left: 40px;
   margin-right: 12px;
-  width: 22%;
+  width: 13.7%;
 }
 
 .team-bar .fourth-arrow {
   float: left;
   margin-left: 25px;
-  width: 20%;
+  width: 26.5%;
 }
 
 .team-bar .first-one-arrow hr {
@@ -1350,7 +1357,7 @@ ul.social_icons li  a i{
 
 .team-bar .first-arrow .fa-angle-up {
   background:#2D7DA4;
-  margin-left:-33px
+  margin-left:-30px
  }
 
 .team-bar .second-arrow .fa-angle-down {
