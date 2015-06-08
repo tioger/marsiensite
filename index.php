@@ -55,7 +55,7 @@ $erreur = 'Au moins un des champs est vide.';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | Corlate</title>
+    <title>SIMPLonMARS or how learn to learn | Home</title>
 	
 	<!-- core CSS -->
     <link href="css/bootstrap.min2.css" rel="stylesheet">
@@ -157,6 +157,50 @@ $erreur = 'Au moins un des champs est vide.';
             <i class="fa fa-chevron-right"></i>
         </a>
     </section><!--/#main-slider-->
+
+    <section id="about-us">
+        <div class="container">
+            <div class="center wow fadeInDown">
+                <h2>SIMPLonMARS</h2>
+                <p class="lead">Centrale Marseille et Simplon.co, fabrique sociale de codeurs, s’associent pour développer SIMPLonMARS : une formation innovante orientée vers les métiers du numérique et ouverte aux jeunes issus des quartiers prioritaires de Marseille.</p>
+            </div>
+            
+            <!-- about us slider -->
+            <div id="about-slider">
+                <div id="carousel-slider" class="carousel slide" data-ride="carousel">
+                    <div id="imgaboutus">
+                        <img src="img/img_2272.jpg">
+                    </div>  
+                </div> <!--/#carousel-slider-->
+            </div><!--/#about-slider-->
+            
+            
+            <!-- Our Skill -->
+            <div class="skill-wrap clearfix">
+            
+                <div class="row" style="margin-right: 0px; margin-left: 0px;">
+                    <div id="imgaboutus2">
+                        <img src="img/simplon_mars_agrandi.png">
+                    </div>
+                    <div class="wow fadeInDown" style="margin-top: -20px;">
+                    <p class="lead">Bâtie sur 12 à 18 mois, cette formation qualifiante articule un temps d’apprentissage intensif (les 6 premiers mois) et un temps de professionnalisation en alternance (les 6 à 12 mois suivants). En se concentant sur un effectif de 25 jeunes par an, et en construisant des partenariats privilégiés prioritairement avec Pôle Emploi et les entreprises du secteur, l’objectif est de favoriser le retour ou l’accès à l’emploi de tous les bénéficiaires. Le développement de cette formation à Centrale Marseille permettra de faire bénéficier les apprenants d’un environnement stimulant et exigeant, de les familiariser aux codes de la vie en entreprise et de leur faire profiter du parrainage bénévole d’étudiants centraliens.</br></br>
+
+Mené dans une démarche d’innovation sociale, ce projet constitue un triple défi :</p>
+<ul>
+    <li class="lead">Économique : répondre aux besoins de recrutement des entreprises du numérique engagées dans cette démarche citoyenne ;</li>
+    <li class="lead">Social : en agissant, en partenariat avec Pôle Emploi, sur l’emploi et la qualification de publics marginalisés sélectionnés uniquement sur la base de critères sociaux et de leur motivation, et non selon les diplômes ;</li>
+    <li class="lead">Académique : en réalisant l’hybridation entre des parcours d’insertion et le monde de l’enseignement supérieur sélectif.</li>
+</ul>
+
+<p class="lead">Démarrage de la formation : lundi 2 mars dans les locaux de Centrale Marseille</br></br>
+
+24 jeunes (18-30 ans) composent cette 1ère promotion. Ils viennent d'horizons divers mais ont tous en commun de rencontrer des difficultés pour leur insertion professionnelle.</br></br>
+Leurs parcours scolaires ont souvent été marqués par des orientations précoces en filières professionnelles et des études inabouties. Ils sont 50% à être titulaires uniquement du baccalauréat et plus d'un tiers à ne posséder aucun diplôme ou un diplôme inférieur au baccalauréat. Majoritairement issus des quartiers prioritaires de Marseille, ils reflètent la diversité de cette ville et incarnent les handicaps auxquels est confrontée la jeunesse dans les quartiers défavorisés.</p>
+                    </div>
+                </div>
+            </div><!--/.our-skill-->
+        </div>
+    </section>
 
     <section id="feature" >
         <div class="container">

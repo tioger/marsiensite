@@ -38,7 +38,14 @@
 				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.php">A propos</a></li>
+                        <li class="dropdown">
+                            <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">A propos<i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="equipe.php">Equipe</a></li>
+                                <li><a href="promos.php">Nos Promos</a></li>
+                                <li><a href="presse.php">Presse</a></li>
+                            </ul>
+                        </li>
                         <li><a href="services.php">Formation</a></li>
                         <li><a href="portfolio.php">Ecosystème</a></li>
                         <li class="dropdown">

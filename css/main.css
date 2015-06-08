@@ -279,7 +279,7 @@ input.search-form:hover {
   padding-bottom: 0;
 }
 
- .navbar-nav{
+.navbar-nav{
   margin-top: 12px;
  }
 
@@ -2547,6 +2547,8 @@ shortcodes page css
 }
 #imgaboutus2{
   margin:auto;
-  width: 586px;
-  margin-top: -80px; 
+  width: 400px;
+}
+#imgaboutus2 img{
+  width: 100%;
 }
