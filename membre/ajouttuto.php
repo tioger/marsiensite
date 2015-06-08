@@ -16,7 +16,7 @@ if (isset($_POST['envoyer']) && $_POST['envoyer'] == 'Envoyer') {
     }
     else {
       include ("../../bdd/localhostpdo/_mysql.php");
-      // on teste si une entrée de la base contient ce couple login / pass
+      // on teste si un tuto à le meme nom
       $name = $_POST['name'];
       $sql = "SELECT * FROM Tutos WHERE name = ? ";
       $req = $bdd->prepare($sql);
