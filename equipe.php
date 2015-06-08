@@ -39,7 +39,7 @@
 
 				<div class="row clearfix">	
 					<div class="col-md-4 col-sm-4">	
-						<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+						<div class="single-profile wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
 							<div class="media">
 								<div class="pull-left blc-img-prof">
 									<a href="#"><img class="media-object" src="img/rodolphe.jpg" width="328" alt=""></a>
@@ -67,7 +67,7 @@ Rodolphe est une personnification de la puissance.</p>
 
 
 					<div class="col-md-4 col-sm-4 col-md-offset-2">	
-						<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+						<div class="single-profile wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
 							<div class="media">
 								<div class="pull-left blc-img-prof">
 									<a href="#"><img class="media-object" src="img/rodolphe.jpg" width="328" alt=""></a>
@@ -94,26 +94,23 @@ Rodolphe est une personnification de la puissance.</p>
 					</div><!--/.col-lg-4 -->			
 				</div> <!--/.row -->
 				<div class="row team-bar">
-					<div class="first-one-arrow hidden-xs">
-						<hr>
-					</div>
-					<div class="first-arrow hidden-xs">
+					<div class="barre first-arrow col-md-3">
 						<hr> <i class="fa fa-angle-up"></i>
 					</div>
-					<div class="second-arrow hidden-xs">
+					<div class="barre second-arrow col-md-3">
 						<hr> <i class="fa fa-angle-down"></i>
 					</div>
-					<div class="third-arrow hidden-xs">
+					<div class="barre third-arrow col-md-3">
 						<hr> <i class="fa fa-angle-up"></i>
 					</div>
-					<div class="fourth-arrow hidden-xs">
+					<div class="barre fourth-arrow col-md-3">
 						<hr> <i class="fa fa-angle-down"></i>
 					</div>
 				</div> <!--skill_border-->       
 
 				<div class="row clearfix">   
 					<div class="col-md-4 col-sm-6 col-md-offset-2">	
-						<div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+						<div class="single-profile wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
 							<div class="media">
 								<div class="pull-left blc-img-prof">
 									<a href="#"><img class="media-object" src="img/rodolphe.jpg" width="328" alt=""></a>
@@ -140,7 +137,7 @@ Rodolphe est une personnification de la puissance.</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6 col-md-offset-2">
-						<div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+						<div class="single-profile wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
 							<div class="media">
 								<div class="pull-left blc-img-prof">
 									<a href="#"><img class="media-object" src="img/rodolphe.jpg" width="328" alt=""></a>
