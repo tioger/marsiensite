@@ -6,11 +6,13 @@
     }
     ?>
 <?php
+include ("../../../bdd/localhostpdo/_mysql.php");
 if (isset($_POST['delcom']) && $_POST['delcom'] == 'Supprimer') {
-    $base = mysql_connect ('localhost', 'root', 'marsien13');
-    mysql_select_db ('teammorttp', $base);
-    $query = "DELETE FROM commentary WHERE id=".$_GET['comid'];
-    mysql_query($query) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
+    
+    $req = $bdd->prepare("DELETE FROM commentary WHERE id= :comid");
+    $req->execute(array(
+        'comid' => $_GET['comid']
+        ));
     header('Location: tutotemplate.php?tuto='.$_GET["tuto"]);
     exit();
 
@@ -18,20 +20,24 @@ if (isset($_POST['delcom']) && $_POST['delcom'] == 'Supprimer') {
 ?>
 <?php
 if (isset($_POST['ajoutcom']) && $_POST['ajoutcom'] == 'Ajouter') {
-    $base = mysql_connect ('localhost', 'root', 'marsien13');
-    mysql_select_db ('teammorttp', $base);
-    $query = 'INSERT INTO commentary VALUES ("", "'.mysql_escape_string($_POST['authorcom']).'", "'.mysql_escape_string($_POST['comment']).'", "'.mysql_escape_string($_POST['tutoid']).'")';
-    mysql_query($query) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
+    
+    $req = $bdd->prepare("INSERT INTO commentary(id, authorcom, comment, tutoid) VALUES(:id, :authorcom, :comment, :tutoid)");
+    $req->execute(array(
+        "id" => "",
+        "authorcom" => $_POST['authorcom'],
+        "comment" => $_POST['comment'],
+        "tutoid" => $_POST['tutoid']
+        ));
     header('Location: tutotemplate.php?tuto='.$_GET["tuto"]);
     exit();
     }
 ?>
 <?php
 if (isset($_POST['supprimer']) && $_POST['supprimer'] == 'Supprimer') {
-    $base = mysql_connect ('localhost', 'root', 'marsien13');
-    mysql_select_db ('teammorttp', $base);
-    $query = "DELETE FROM Tutos WHERE id= $_GET[tuto]";
-    mysql_query($query) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
+    $req = $bdd->prepare("DELETE FROM Tutos WHERE id= :tuto");
+    $req->execute(array(
+        'tuto' => $_GET['tuto']
+        ));
     header('Location: confirmdel.php');
     exit();
     }
@@ -40,8 +46,11 @@ if (isset($_POST['supprimer']) && $_POST['supprimer'] == 'Supprimer') {
 if (isset($_POST['enregistrer']) && $_POST['enregistrer'] == 'Enregistrer') {
     $base = mysql_connect ('localhost', 'root', 'marsien13');
     mysql_select_db ('teammorttp', $base);
-    $sql = "UPDATE Tutos SET content='".mysql_escape_string($_POST['contentedit'])."' WHERE id= $_GET[tuto]";
-    mysql_query($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
+    $req = $bdd->prepare("UPDATE Tutos SET content= :contentedit WHERE id= :tuto");
+    $req->execute(array(
+        'contentedit' => $_POST['contentedit'],
+        'tuto' => $_GET['tuto']
+        ));
     header('Location: tutotemplate.php?tuto='.$_GET["tuto"]);
     exit();
     }
@@ -101,7 +110,7 @@ if (isset($_POST['enregistrer']) && $_POST['enregistrer'] == 'Enregistrer') {
             <div class="container-fluid" style="padding-right:0px;padding-left:0px;">
                 <div id="tutocadre" style="border:1px black solid;border-radius: 20px 20px 20px 20px;">
                     <?php  
-                        include ("../_mysql.php");
+                        include ("../../../bdd/localhostpdo/_mysql.php");
                          
                         // On récupère tout le contenu de la table Tuto
                         $reponse = $bdd->query("SELECT * FROM Tutos WHERE id= $_GET[tuto]");
@@ -159,7 +168,7 @@ if (isset($_POST['enregistrer']) && $_POST['enregistrer'] == 'Enregistrer') {
                         <p id="title">Commentaires</p>  
                     </div> 
                     <?php  
-                        include ("../_mysql.php");
+                        include ("../../../bdd/localhostpdo/_mysql.php");
                          
                         // On récupère tout le contenu de la table commentary
                         $reponse = $bdd->query("SELECT * FROM commentary WHERE tutoid= $_GET[tuto]");
@@ -169,7 +178,7 @@ if (isset($_POST['enregistrer']) && $_POST['enregistrer'] == 'Enregistrer') {
                         <div class="comment">
                             <div class="authorcom">Posté par <?php echo $donnees['authorcom']; ?></div>
                             <div class="contentcom"><?php echo utf8_decode($donnees['comment']); ?></div>
-                            <?php if($_SESSION['login'] == $donnees['authorcom']){ 
+                            <?php if($_SESSION['login'] == $donnees['authorcom'] or (isset($_SESSION['admin']) && $_SESSION['admin'] == 'admin')){ 
                             echo "<div id='deletecom'>
                                     <a class='btndeletecom'  data-toggle='modal' data-target='.bs-com-modal-sm' href=''>Supprimer ce commentaire</a>
                                     <div class='modal fade bs-com-modal-sm' tabindex='-1' role='dialog' aria-labelledby='mySmallModalLabel' aria-hidden='true'>
