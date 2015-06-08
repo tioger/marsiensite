@@ -7,7 +7,7 @@
 ?>
 <html>
     <head>
-        <meta http-equiv="refresh" content="10;url=http://team-mortal-gaming.com/tuto.php" />
+        <meta http-equiv="refresh" content="10;url=../tuto.php" />
         <meta charset="utf-8" >
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>Confirmation Creation TuTo</title>

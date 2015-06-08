@@ -8,37 +8,48 @@
 <?php
 // on teste si le visiteur a soumis le formulaire
 if (isset($_POST['envoyer']) && $_POST['envoyer'] == 'Envoyer') {
-// on teste l'existence de nos variables. On teste également si elles ne sont pas vides
-if ((isset($_POST['name']) && !empty($_POST['name']))  && (isset($_POST['shortdescrib']) && !empty($_POST['shortdescrib'])) && (isset($_POST['language']) && !empty($_POST['language'])) && (isset($_POST['content']) && !empty($_POST['content']))&& (isset($_POST['author']) && !empty($_POST['author']))) {
-// on teste les deux  données voir si elles ne sont pas identiques
-if ($_POST['name'] == $_POST['language']) {
-$erreur = 'Les 2 champs sont identiques.';
-}
-else {
-$base = mysql_connect ('localhost', 'root', 'marsien13');
-mysql_select_db ('teammorttp', $base);
-
-// on recherche si un tuto du meme nom existe déjà
-$sql = 'SELECT count(*) FROM Tutos WHERE name="'.mysql_escape_string($_POST['name']).'"';
-$req = mysql_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
-$data = mysql_fetch_array($req);
-
-if ($data[0] == 0) {
-$sql = 'INSERT INTO Tutos VALUES("", "'.mysql_escape_string($_POST['language']).'", "'.mysql_escape_string($_POST['shortdescrib']).'", "'.mysql_escape_string($_POST['name']).'", "'.mysql_escape_string($_POST['content']).'", "'.mysql_escape_string($_POST['author']).'", "'.mysql_escape_string($_POST['online']).'")';
-mysql_query($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
-
-
-header('Location: tuto/confirmcreate.php');
-exit();
-}
-else {
-$erreur = 'Un tuto porte déjà le meme nom.';
-}
-}
-}
-else {
-$erreur = 'Au moins un des champs est vide.';
-}
+  // on teste l'existence de nos variables. On teste également si elles ne sont pas vides
+  if ((isset($_POST['name']) && !empty($_POST['name']))  && (isset($_POST['shortdescrib']) && !empty($_POST['shortdescrib'])) && (isset($_POST['language']) && !empty($_POST['language'])) && (isset($_POST['content']) && !empty($_POST['content']))&& (isset($_POST['author']) && !empty($_POST['author']))) {
+    // on teste les deux  données voir si elles ne sont pas identiques
+    if ($_POST['name'] == $_POST['language']) {
+      $erreur = 'Les 2 champs sont identiques.';
+    }
+    else {
+      include ("../../bdd/localhostpdo/_mysql.php");
+      // on teste si une entrée de la base contient ce couple login / pass
+      $name = $_POST['name'];
+      $sql = "SELECT * FROM Tutos WHERE name = ? ";
+      $req = $bdd->prepare($sql);
+      $req->execute(array($name));
+      $rows = $req->fetch(PDO::FETCH_NUM);
+      // si on obtient une réponse, alors l'utilisateur est un membre
+      if ( $rows[0] == false) {
+        if(isset($_POST['online']) && !empty($_POST['online'])){
+          $online = $_POST['online'];
+        }
+        else{
+          $online = "";
+        }
+        $req = $bdd->prepare("INSERT INTO Tutos(id, language, shortdescrib, name, content, author, online) VALUES(:id, :language, :shortdescrib, :name, :content, :author, :online)");
+        $req->execute(array(
+          "id" => "",
+          "language" => $_POST['language'],
+          "shortdescrib" => $_POST['shortdescrib'],
+          "name" => $_POST['name'],
+          "content" => $_POST['content'],
+          "author" => $_POST['author'],
+          "online" => $online));
+        header('Location: tuto/confirmcreate.php');
+        exit();
+      }
+      else {
+        $erreur = 'Un tuto porte déjà le meme nom.';
+      }
+    }
+  }
+  else {
+    $erreur = 'Au moins un des champs est vide.';
+  }
 }
 ?>
 
