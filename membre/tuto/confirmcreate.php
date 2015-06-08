@@ -34,8 +34,8 @@
 		                    Si la redirection ne fonctionne pas vous pouvez selectionner un des liens ci-dessous .
 		                </div>
 		                <div class="error-actions">
-		                    <a href="http://team-mortal-gaming.com/tuto.php" class="btn btn-primary btn-lg"><span class="fa fa-fw fa-file-code-o "></span>
-		                        Liste des Tutos </a><a href="http://team-mortal-gaming.com/membre.php" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-home"></span> Retour vers l'Accueil </a>
+		                    <a href="../tuto.php" class="btn btn-primary btn-lg"><span class="fa fa-fw fa-file-code-o "></span>
+		                        Liste des Tutos </a><a href="../index.php" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-home"></span> Retour vers l'Accueil </a>
 		                </div>
 		            </div>
 		        </div>

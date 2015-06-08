@@ -5,17 +5,7 @@
     exit();
     }
     ?>
-<?php
-if (isset($_POST['enregistrer']) && $_POST['enregistrer'] == 'Enregistrer') {
-    $base = mysql_connect ('localhost', 'root', 'marsien13');
-    mysql_select_db ('teammorttp', $base);
-    $sql = "UPDATE Tutos SET content='$_POST[contentedit]' WHERE id= $_GET[tuto]";
-    mysql_query($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
-    header('Location: tutotemplate.php?tuto='.$_GET["tuto"]);
-    exit();
-    }
 
-?>
 <html lang="fr">
 
 <head>
