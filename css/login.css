@@ -36,5 +36,15 @@ font-size: 14px;
 padding: 11px 0 0 0px;
 border-top:1px solid #dedede;
 }
-
+@media (min-width: 992px) {
+	.container > .navbar-collapse{
+		margin-right:70px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	nav .container{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
  
