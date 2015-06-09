@@ -38,8 +38,9 @@
 				
                 <div class="collapse navbar-collapse navbar-right margo">
                     <ul class="nav navbar-nav">
+                        <li class="fuck-off fa-2x"><a href="./"><i class="fa fa-home"></i></a></li>
                         <li class="dropdown">
-                            <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">A propos<i class="fa fa-angle-down"></i></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown">A propos<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="equipe.php">Equipe</a></li>
                                 <li><a href="promos.php">Nos Promos</a></li>
@@ -47,16 +48,16 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="ecosys.php" class="dropdown-toggle" data-toggle="dropdown">Ecosystème<i class="fa fa-angle-down"></i></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown">Ecosystème<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="simplon.php">Simplon.Co</a></li>
+                                <li><a href="http://simplon.co/" target="blank">Simplon.Co</a></li>
                                 <li><a href="centrale.php">Centrale</a></li>
                                 <li><a href="marseilleS.php">Marseille Solution</a></li>
                                 <li><a href="castleG.php">Chateau Gombert</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Offres<i class="fa fa-angle-down"></i></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown">Offres<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="event.php">Evènement</a></li>
                                 <li><a href="recrutez.php">Recrutez</a></li>
@@ -64,7 +65,6 @@
                         </li>
                         <li><a href="partenaires.php">Partenaires</a></li>
                         <li><a href="contact-us.php">Contact</a></li>
-                        <li><a href="blog.php">Blog</a></li> 
                         <li class="menutest" id="menu1">
                             <a class="account">
                                Login

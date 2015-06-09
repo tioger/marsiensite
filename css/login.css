@@ -40,11 +40,16 @@ border-top:1px solid #dedede;
 	.container > .navbar-collapse{
 		margin-right:70px;
 	}
+	.fuck-off{
+		display: block;
+	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
 	nav .container{
 		padding-left: 0px;
 		padding-right: 0px;
 	}
+	.fuck-off{
+		display: block;
+	}
 }
- 
