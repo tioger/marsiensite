@@ -34,6 +34,12 @@
                     <?php 
                         if(isset($_SESSION['admin'])) 
                             echo "<li>
+                                      <a href='index.php'><i class='fa fa-fw fa-dashboard'></i> Infos Générales</a>
+                                  </li>"; 
+                    ?>
+                    <?php 
+                        if(isset($_SESSION['admin'])) 
+                            echo "<li>
                                       <a href='userlist.php'><i class='fa fa-fw fa-user'></i> Liste des Membres</a>
                                   </li>"; 
                     ?>
@@ -47,6 +53,18 @@
                         if(isset($_SESSION['admin']))
                             echo "<li>
                                       <a href='ajoutadmin.php'><i class='fa fa-fw fa-user'></i> Ajout Admin</a>
+                                  </li>";
+                    ?>
+                    <?php 
+                        if(isset($_SESSION['admin']))
+                            echo "<li>
+                                      <a href='commentlist.php'><i class='fa fa-fw fa-file-code-o'></i> Liste des Commentaires</a>
+                                  </li>";
+                    ?>
+                    <?php 
+                        if(isset($_SESSION['admin']))
+                            echo "<li>
+                                      <a href='tutolist.php'><i class='fa fa-fw fa-file-code-o'></i> Liste des Tutos</a>
                                   </li>";
                     ?>
                 </ul>

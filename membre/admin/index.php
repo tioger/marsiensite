@@ -54,27 +54,163 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            SimplonMars <small>calendrier</small>
+                            Dashboard <small>Statistics Overview</small>
                         </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="fa fa-dashboard"></i> Dashboard
+                            </li>
+                        </ol>
                     </div>
                 </div>
-               
                 <!-- /.row -->
-
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                
+                     <!-- Debut Boucle pour compteur des membres-->
+                          <?php  
+                            include ("../../../bdd/localhostpdo/_mysql.php");
+                             
+                            // On récupère tout le contenu de la table membre
+                            $compteurmembre =0;
+                            $reponse = $bdd->query("SELECT * FROM membre ORDER BY ID ");
+                            while ($donnees = $reponse->fetch())
+                            {
+                                $compteurmembre ++;
+                            }
+
+                              $reponse->closeCursor();
+
+                          ?> 
+                          <!-- Fin Boucle pour compteur des membres-->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-user fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge"><?php echo $compteurmembre; ?></div>
+                                        <div>Membres!</div>
+                                    </div>
                                 </div>
+                            </div>
+                            <a href="userlist.php">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Voir Tout</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Debut Boucle pour compteur des commentaires-->
+                    <?php  
+                        include ("../../../bdd/localhostpdo/_mysql.php");
+                         $compteurcom =0;
+                        // On récupère tout le contenu de la table commentary
+                        $reponse = $bdd->query("SELECT * FROM commentary");
+                        while ($donnees = $reponse->fetch())
+                        {
+                          $compteurcom ++;  
+                        }
+
+                        $reponse->closeCursor();
+
+                    ?> 
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-yellow">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-comments-o fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge"><?php echo $compteurcom; ?></div>
+                                        <div>Commentaires!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="commentlist.php">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Voir Tout</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <?php  
+                        include ("../../../bdd/localhostpdo/_mysql.php");
+                         $compteurtutoon = 0;
+                        // On récupère tout le contenu de la table commentary
+                        $reponse = $bdd->query("SELECT * FROM Tutos WHERE online ='online'");
+                        while ($donnees = $reponse->fetch())
+                        {
+                          $compteurtutoon ++;  
+                        }
+
+                        $reponse->closeCursor();
+
+                    ?> 
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-file-code-o fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge"><?php echo $compteurtutoon ?></div>
+                                        <div>Tutos en Ligne!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="tutolist.php">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Voir Tout</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <?php  
+                        include ("../../../bdd/localhostpdo/_mysql.php");
+                         $compteurtutooff =0;
+                        // On récupère tout le contenu de la table commentary
+                        $reponse = $bdd->query("SELECT * FROM Tutos WHERE online =''");
+                        while ($donnees = $reponse->fetch())
+                        {
+                          $compteurtutooff ++;  
+                        }
+
+                        $reponse->closeCursor();
+
+                    ?> 
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-red">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-file-code-o fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge"><?php echo $compteurtutooff ?></div>
+                                        <div>Tutos Hors Ligne!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="tutolist.php">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Voir Tout</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <!-- /.row -->
-
-                
-                <!-- /.row -->
-
             </div>
             <!-- /.container-fluid -->
         </div>
