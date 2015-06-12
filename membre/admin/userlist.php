@@ -1,7 +1,7 @@
 <?php
     session_start();
     if (!isset($_SESSION['admin'])) {
-    header ('Location: index.php');
+    header ('Location: ../index.php');
     exit();
     }
     ?>
@@ -69,7 +69,7 @@
                         <tbody>
                           <!-- Debut Boucle pour affichage des membres-->
                           <?php  
-                            include ("../../bdd/localhostpdo/_mysql.php");
+                            include ("../../../bdd/localhostpdo/_mysql.php");
                              
                             // On récupère tout le contenu de la table commentary
                             $reponse = $bdd->query("SELECT * FROM membre ORDER BY ID ");

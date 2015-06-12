@@ -1,7 +1,7 @@
 <?php
     session_start();
     if (!isset($_SESSION['login'])) {
-    header ('Location: index.php');
+    header ('Location: ../index.php');
     exit();
     }
     ?>
@@ -15,7 +15,7 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription') {
       $erreur = 'Les 2 mots de passe sont différents.';
     }
     else {
-      include ("../../bdd/localhostpdo/_mysql.php");
+      include ("../../../bdd/localhostpdo/_mysql.php");
        // on teste si ce login est déjà utilisé
       $login = $_POST['login'];
       $sql = "SELECT * FROM membre WHERE login = ? ";
