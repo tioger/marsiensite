@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="css/login.css" type="text/css" />
+<link rel="stylesheet" href="css/nospromos.css" type="text/css" />
 <header id="header">
         <div class="top-bar">
             <div class="container">
@@ -43,7 +44,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown">A propos<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="equipe.php">Equipe</a></li>
-                                <li><a href="promos.php">Nos Promos</a></li>
+                                <li><a href="nospromos.php">Nos Promos</a></li>
                                 <li><a href="presse.php">Presse</a></li>
                             </ul>
                         </li>
