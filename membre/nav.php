@@ -16,7 +16,13 @@
                     <a href="#" class="dropdown-toggle" id="capitalize" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo htmlentities(trim($_SESSION['login'])); ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu" id="dmwidth">
                         <?php if(isset($_SESSION['admin'])) echo "<li><a href='admin/index.php'><i class='fa fa-fw fa-user'></i> Espace Admin</a></li><li class='divider'></li>"; ?>
-                         <li>
+                        <?php echo "<li><a href='profil.php?profil=";echo htmlentities(trim($_SESSION['login']));echo "'><i class='fa fa-fw fa-user'></i> Mon Profil</a></li><li class='divider'></li>"; ?>
+                        <li>
+                            <a href="editprofil.php"><i class="fa fa-fw fa-user "></i> Modifier Mon Profil</a>
+                        </li>
+                        <li class='divider'>
+                        </li>
+                        <li>
                             <a href="mytuto.php"><i class="fa fa-fw fa-file-code-o "></i> Mes Tutos</a>
                         </li>
                         <li class='divider'>

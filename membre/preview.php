@@ -16,7 +16,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Votre Profil</title>
+    <title>Aperçu du Profil</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -42,12 +42,12 @@
     <link href="css/profil.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="margin-top:0 !important;">
 
-    <div id="wrapper">
+    <div id="wrapper" style="padding-left:0 !important;">
 
-        <!-- Navigation -->
-        <?php include 'nav.php'; ?>
+        
+        
 
         <div id="page-wrapper">
 
@@ -70,8 +70,8 @@
                                 echo '<!-- Page Heading -->
                                         <div class="row">
                                             <div class="col-lg-12">
-                                                <h1 class="page-header">
-                                                    <small>Votre</small>Profil
+                                                <h1 class="page-header" style="text-align: center;">
+                                                    Aperçu du Profil
                                                 </h1>
                                             </div>
                                         </div>

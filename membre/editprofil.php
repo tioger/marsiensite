@@ -56,7 +56,7 @@
 
                     <?php 
                        include ("../../bdd/localhostpdo/_mysql.php");
-                        $reponse = $bdd->query('SELECT * FROM admin WHERE login = "'.$_GET['profil'].'"');
+                        $reponse = $bdd->query('SELECT * FROM admin WHERE login = "'.$_SESSION["login"].'"');
                         $countadmin = 0;
                         // On affiche chaque entrée une à une
                         while ($donnees = $reponse->fetch()){
@@ -64,7 +64,7 @@
                         }
                         if($countadmin == 1){
                             // On récupère tout le contenu de la table Tuto
-                            $reponse = $bdd->query('SELECT * FROM admin WHERE login ="'.$_GET['profil'].'"');
+                            $reponse = $bdd->query('SELECT * FROM admin WHERE login ="'.$_SESSION["login"].'"');
                             // On affiche chaque entrée une à une
                             while ($donnees = $reponse->fetch()){
                                 echo '<!-- Page Heading -->
@@ -87,6 +87,7 @@
                                                                 <div class="panel-heading" >
                                                                     <div style="float:left;width:330px">
                                                                         <h3 class="panel-title" style="color:black;text-align:center">'; if(!empty($donnees["lastname"])){ echo $donnees["lastname"];} else{ echo "Nom : NC  ";};echo ' '; if(!empty($donnees["firstname"])){ echo $donnees["firstname"];} else{ echo "Prénom : NC  ";}; echo'</h3>
+                                                                        
                                                                     </div>
                                                                     <div style="float:right;">
                                                                         <a href="edit.html" >Edit Profile</a>
@@ -95,7 +96,15 @@
                                                                 </div>
                                                                 <div class="panel-body">
                                                                     <div class="row">
-                                                                        <div class="col-md-3 col-lg-3 " align="center"> <img width="330" alt="User Pic" src="';if(!empty($donnees["imgprofil"])){ echo $donnees["imgprofil"];} else{ echo "img/default.png";}; echo '" > </div>
+                                                                        <div class="col-md-3 col-lg-3 " align="center">
+                                                                            <img width="330" alt="User Pic" src="';if(!empty($donnees["imgprofil"])){ echo $donnees["imgprofil"];} else{ echo "img/default.png";}; echo '" >
+                                                                            <form method="post" action="preview.php?profil=';echo $_SESSION["login"]; echo '" onSubmit="popupform(this,"aperçu")" >
+                                                                                <input type="text" name="imgprofil" value="'; echo $donnees["imgprofil"];echo '">
+                                                                                <input type="submit" name="enregistrer" value="Enregistrer">
+                                                                            </form> 
+                                                                        </div>
+                                                                        
+
                                                                         <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
                                                                           <dl>
                                                                             <dt>DEPARTMENT:</dt>
@@ -205,7 +214,7 @@
                         }
                         else{
                             // On récupère tout le contenu de la table Tuto
-                            $reponse = $bdd->query('SELECT * FROM membre WHERE login ="'.$_GET['profil'].'"');
+                            $reponse = $bdd->query('SELECT * FROM membre WHERE login ="'.$_SESSION["login"].'"');
 
                             // On affiche chaque entrée une à une
                             while ($donnees = $reponse->fetch())
@@ -369,6 +378,17 @@
     <script src="js/plugins/morris/raphael.min.js"></script>
     <script src="js/plugins/morris/morris.min.js"></script>
     <script src="js/plugins/morris/morris-data.js"></script>
+    <SCRIPT TYPE="text/javascript">
+        
+        function popupform(myform, windowname)
+        {
+        if (! window.focus)return true;
+        window.open('', windowname, 'height=200,width=400,scrollbars=yes');
+        myform.target=windowname;
+        return true;
+        }
+        
+    </SCRIPT>
 
 </body>
 
