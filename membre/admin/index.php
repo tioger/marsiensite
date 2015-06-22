@@ -209,6 +209,41 @@
                             </a>
                         </div>
                     </div>
+                     <?php  
+                        include ("../../../bdd/localhostpdo/_mysql.php");
+                         $compteurpress =0;
+                        // On récupère tout le contenu de la table commentary
+                        $reponse = $bdd->query("SELECT * FROM Press");
+                        while ($donnees = $reponse->fetch())
+                        {
+                          $compteurpress ++;  
+                        }
+
+                        $reponse->closeCursor();
+
+                    ?> 
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-red">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-file-code-o fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge"><?php echo $compteurpress ?></div>
+                                        <div>Presses</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="presselist.php">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Voir Tout</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <!-- /.row -->
             </div>

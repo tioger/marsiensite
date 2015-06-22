@@ -1,0 +1,193 @@
+html,body{
+	margin:0;
+	padding:0;
+	height: 100%;
+	background: url("../img/back.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+}
+#ban {
+	width:100%;
+	height:170px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+#logo{
+	float:left;
+	margin-left: 30%;
+	margin-top: 26px;
+}
+#name{
+	margin: auto;
+	width: 800px;
+	padding-top: 14px;
+}
+#name p{
+	color: #FFF;
+	margin: auto;
+	text-align: center;
+	font-size: 60px;
+}
+#facebook{
+	width: 300px;
+	margin-top: -40px;
+	position: fixed;
+	margin-left: 88%;
+}
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 3px 1px 1px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+#content{
+	width:100%;
+	min-height: 100%;
+	position: relative;
+}
+.row{
+	width: 780px;
+    margin: auto;
+}
+.fiche1 {
+	width: 340px;
+	border-radius: 20px;
+	height: 340px;
+	float:left;
+	margin-top:40px;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+.fiche1 img{
+	 width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+}
+#imgpanda{
+	-webkit-box-shadow: -13px -15px 9px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    -13px -15px 9px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         -13px -15px 9px 0px rgba(50, 50, 50, 0.75);
+}
+#textpanda{
+	-webkit-box-shadow: 15px -13px 9px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    15px -13px 9px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         15px -13px 9px 0px rgba(50, 50, 50, 0.75);
+	margin-left:100px;
+}
+#textpanda p{
+	text-align: center;
+	font-size: 30px;
+	padding-top: 60px;
+}
+.fiche2 {
+	width: 340px;
+	border-radius: 20px;
+	height: 340px;
+	float:left;
+	margin-top:40px;
+	
+}
+#videopanda{
+	-webkit-box-shadow: -13px 15px 9px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    -13px 15px 9px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         -13px 15px 9px 0px rgba(50, 50, 50, 0.75);
+	
+}
+#videopanda iframe {
+	border-radius: 20px;
+}
+#imgronde{
+	margin-left:100px;
+}
+#imgronde img{
+	border-radius: 100%;
+	width: 100%;
+	height: 100%;
+	-webkit-box-shadow: 13px 15px 9px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    13px 15px 9px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         13px 15px 9px 0px rgba(50, 50, 50, 0.75);
+	
+}
+#partner{
+	height:100%;
+	width:780px;
+	background: url("../img/backskill.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	clear:both;
+	margin:auto;
+	padding-top: 40px;
+	margin-bottom: 40px;
+}
+#partner h3 {
+	text-align: center;
+	color:white;
+}
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+
+div#slider { 
+	overflow: hidden; 
+	border-radius: 40px;
+	cursor: pointer;
+}
+div#slider figure img {
+ width: 20%; float: left; 
+}
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 20s slidy infinite;
+  height:284px;
+}
+#slider img {
+	height:284px;
+}
+#footer {
+	width:100%;
+	height:50px;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin-top:50px;
+	padding-top: 15px;
+}
+#footer p{
+	color:white;
+	text-align: center;
+}

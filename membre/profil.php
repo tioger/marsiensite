@@ -95,7 +95,7 @@
                                                                 </div>
                                                                 <div class="panel-body">
                                                                     <div class="row">
-                                                                        <div class="col-md-3 col-lg-3 " align="center"> <img width="330" alt="User Pic" src="';if(!empty($donnees["imgprofil"])){ echo $donnees["imgprofil"];} else{ echo "img/default.png";}; echo '" > </div>
+                                                                        <div class="col-md-3 col-lg-3 profil_pick" align="center"> <img width="330" alt="User Pic" src="';if(!empty($donnees["imgprofil"])){ echo $donnees["imgprofil"];} else{ echo "img/default.png";}; echo '" > </div>
                                                                         <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
                                                                           <dl>
                                                                             <dt>DEPARTMENT:</dt>
