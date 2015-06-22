@@ -98,7 +98,7 @@
                                                                     <div class="row">
                                                                         <div class="col-md-3 col-lg-3 " align="center">
                                                                             <img width="330" alt="User Pic" src="';if(!empty($donnees["imgprofil"])){ echo $donnees["imgprofil"];} else{ echo "img/default.png";}; echo '" >
-                                                                            <form method="post" action="preview.php?profil=';echo $_SESSION["login"]; echo '" onSubmit="popupform(this,"aperçu")" >
+                                                                            <form method="post" name="aperçu" action="preview.php?profil=';echo $_SESSION["login"]; echo '" onSubmit="popupform(this,"aperçu")" >
                                                                                 <input type="text" name="imgprofil" value="'; echo $donnees["imgprofil"];echo '">
                                                                                 <input type="submit" name="enregistrer" value="Enregistrer">
                                                                             </form> 
