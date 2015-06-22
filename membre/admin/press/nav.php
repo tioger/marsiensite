@@ -15,14 +15,9 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" id="capitalize" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo htmlentities(trim($_SESSION['login'])); ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu" id="dmwidth">
-                        <?php if(isset($_SESSION['admin'])) echo "<li><a href='../admin/index.php'><i class='fa fa-fw fa-user'></i> Espace Admin</a></li><li class='divider'></li>"; ?>
-                         <li>
-                            <a href="../mytuto.php"><i class="fa fa-fw fa-file-code-o "></i>Presse</a>
-                        </li>
-                        <li class='divider'>
-                        </li>
+                        
                         <li>
-                            <a href="../deconnexion.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="../../deconnexion.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
                 </li>
@@ -34,14 +29,50 @@
                         <a href="../../../index.php"><i class="fa fa-fw fa-globe"></i> Retour au Site</a>
                     </li>
                     <li >
-                        <a href="../index.php"><i class="fa fa-fw fa-table"></i> Calendrier</a>
+                        <a href="../../index.php"><i class="fa fa-fw fa-globe"></i> Retour à l'Espace Membre</a>
                     </li>
-                    <li>
-                        <a href="../<?php echo htmlentities(trim($_SESSION['login'])); ?>/" target="_blank"><i class="fa fa-fw fa-desktop"></i> Ma Page</a>
-                    </li>
-                    <li >
-                        <a href="../press.php"><i class="fa fa-fw fa-file-code-o "></i>Presse</a>
-                    </li>
+                    <?php 
+                        if(isset($_SESSION['admin'])) 
+                            echo "<li>
+                                      <a href='../index.php'><i class='fa fa-fw fa-dashboard'></i> Infos Générales</a>
+                                  </li>"; 
+                    ?>
+                    <?php 
+                        if(isset($_SESSION['admin'])) 
+                            echo "<li>
+                                      <a href='../userlist.php'><i class='fa fa-fw fa-user'></i> Liste des Membres</a>
+                                  </li>"; 
+                    ?>
+                    <?php 
+                        if(isset($_SESSION['admin']))
+                            echo "<li>
+                                      <a href='../ajoutmembre.php'><i class='fa fa-fw fa-user'></i> Ajout Membre</a>
+                                  </li>";
+                    ?>
+                    <?php 
+                        if(isset($_SESSION['admin']))
+                            echo "<li>
+                                      <a href='../ajoutadmin.php'><i class='fa fa-fw fa-user'></i> Ajout Admin</a>
+                                  </li>";
+                    ?>
+                    <?php 
+                        if(isset($_SESSION['admin']))
+                            echo "<li>
+                                      <a href='../commentlist.php'><i class='fa fa-fw fa-file-code-o'></i> Liste des Commentaires</a>
+                                  </li>";
+                    ?>
+                    <?php 
+                        if(isset($_SESSION['admin']))
+                            echo "<li>
+                                      <a href='../tutolist.php'><i class='fa fa-fw fa-file-code-o'></i> Liste des Tutos</a>
+                                  </li>";
+                    ?>
+                    <?php 
+                        if(isset($_SESSION['admin']))
+                            echo "<li>
+                                      <a href='../press.php'><i class='fa fa-fw fa-file-code-o'></i> Liste des Articles</a>
+                                  </li>";
+                    ?>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

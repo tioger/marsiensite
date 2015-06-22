@@ -76,7 +76,7 @@
                             {
                           ?>
                           <tr>
-                            <td><a href="../tuto/tutotemplate.php?tuto=<?php echo $donnees['PressID'] ?>"><?php echo $donnees['id'] ?></a></td>
+                            <td><a href="press/presstemplate.php?article=<?php echo $donnees['PressID'] ?>"><?php echo $donnees['PressID'] ?></a></td>
                             <td><?php echo utf8_decode($donnees['Source']) ?></td>
                             <td><?php echo utf8_decode($donnees['Titre']) ?></td>
                             <td><?php echo utf8_decode($donnees['DATE']) ?></td>

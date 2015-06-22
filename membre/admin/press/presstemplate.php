@@ -7,16 +7,6 @@
     ?>
 <?php
 include ("../../../../bdd/localhostpdo/_mysql.php");
-if (isset($_POST['delcom']) && $_POST['delcom'] == 'Supprimer') {
-    
-    $req = $bdd->prepare("DELETE FROM commentary WHERE id= :comid");
-    $req->execute(array(
-        'comid' => $_GET['comid']
-        ));
-    header('Location: presstemplate.php?article='.$_GET["article"]);
-    exit();
-
-    }
 ?>
 <?php
 if (isset($_POST['supprimer']) && $_POST['supprimer'] == 'Supprimer') {
@@ -126,11 +116,14 @@ if (isset($_POST['enregistrer']) && $_POST['enregistrer'] == 'Enregistrer') {
                                     </div>
                                 </div>";
                         ?>
-                        <p id="author">Crée par <span id="capitalize"><?php echo $donnees['Auteur'] ?></span></p>
+                        <p id="author">Ecrit par <span id="capitalize"><?php echo $donnees['Auteur'] ?></span></p>
                     </div>
 					<div id="contenttuto">
-                            <?php echo $donnees['Contenu'];
-                            ?>
+                        <?php echo $donnees['Contenu'];
+                        ?>
+                        <p>
+                            <a href="<?php echo $donnees['Lien'] ?>" target="blank">Lire la suite</a>
+                        </p>
 					</div>
                     <?php
                         }

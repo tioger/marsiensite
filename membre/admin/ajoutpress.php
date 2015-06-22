@@ -30,14 +30,15 @@ if (isset($_POST['envoyer']) && $_POST['envoyer'] == 'Envoyer') {
         else{
           $online = "";
         }
-        $req = $bdd->prepare("INSERT INTO Press(PressID, Source, DATE, Titre, Contenu, Auteur) VALUES(:PressID, :Source, :DATE, :Titre, :Contenu, :Auteur)");
+        $req = $bdd->prepare("INSERT INTO Press(PressID, Source, DATE, Titre, Contenu, Auteur, Lien) VALUES(:PressID, :Source, :DATE, :Titre, :Contenu, :Auteur, :Lien)");
         $req->execute(array(
           "PressID" => "",
           "Source" => $_POST['Source'],
           "DATE" => $_POST['DATE'],
           "Titre" => $_POST['Titre'],
           "Contenu" => $_POST['Contenu'],
-          "Auteur" => $_POST['Auteur']));
+          "Auteur" => $_POST['Auteur'],
+          "Lien" => $_POST['Lien']));
         header('Location: press/confirmcreate.php');
         exit();
       }
@@ -76,9 +77,18 @@ if (isset($_POST['envoyer']) && $_POST['envoyer'] == 'Envoyer') {
   </p>
   </br>
   <p>
+    <label for="Auteur">Auteur</label>
+    <input name="Auteur" id="Auteur" type="text" value="<?php if (isset($_POST['Auteur'])) echo htmlentities(trim($_POST['Auteur'])); ?>">
+  </p>
+  </br>
+  <p>
     <label for="DATE">Date</label>
-    <textarea rows="5" name="DATE" id="DATE" cols="50" ></textarea>
-    <input name="Auteur" type="hidden" value="<?php echo htmlentities(trim($_SESSION['login'])); ?>">
+    <input name="DATE" id="DATE" type="text" value="<?php if (isset($_POST['DATE'])) echo htmlentities(trim($_POST['DATE'])); ?>">
+  </p>
+  </br>
+  <p>
+    <label for="Lien">Lien vers l'Article</label>
+    <input name="Lien" id="Lien" type="text" value="<?php if (isset($_POST['Lien'])) echo htmlentities(trim($_POST['Lien'])); ?>">
   </p>
   </br>
   <p>

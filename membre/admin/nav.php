@@ -67,6 +67,12 @@
                                       <a href='tutolist.php'><i class='fa fa-fw fa-file-code-o'></i> Liste des Tutos</a>
                                   </li>";
                     ?>
+                    <?php 
+                        if(isset($_SESSION['admin']))
+                            echo "<li>
+                                      <a href='press.php'><i class='fa fa-fw fa-file-code-o'></i> Liste des Articles</a>
+                                  </li>";
+                    ?>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

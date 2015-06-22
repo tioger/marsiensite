@@ -127,18 +127,17 @@
                                         <?php  
                                            include ("../../bdd/localhostpdo/_mysql.php"); 
                                             // On récupère tout le contenu de la table Tuto
-                                            $reponse = $bdd->query('SELECT * FROM Tutos WHERE online="online"');
+                                            $reponse = $bdd->query('SELECT * FROM Press');
 
                                             // On affiche chaque entrée une à une
                                             while ($donnees = $reponse->fetch())
                                             {
                                         ?>
                                         <div id="tutocadre">
-                                            <p><span class="underline">Nom du Tuto :</span> <?php echo utf8_decode($donnees['name']); ?>  <span class="underline">Créé par</span> <i class='fa fa-fw fa-user'></i><span id="capitalize"> <?php echo $donnees['author']; ?></span> </p>
-                                            <p class="underline">Courte Description :</p>
-                                            <p class="shortdescribmargin"><?php echo utf8_decode($donnees['shortdescrib']); ?></p>
-                                            <a href="tuto/tutotemplate.php?tuto=<?php echo $donnees['id']; ?>">Voir le Tuto.</a>
-                                            <div id="<?php echo $donnees['language']; ?>"></div>
+                                            <p><span class="underline">Titre de l'Article :</span> <?php echo utf8_decode($donnees['Titre']); ?>  <span class="underline">Créé par</span> <i class='fa fa-fw fa-user'></i><span id="capitalize"> <?php echo $donnees['Auteur']; ?></span> </p>
+                                            <p><span  class="underline">Date :</span> <?php echo utf8_decode($donnees['DATE']); ?></p>
+                                            <a href="press/presstemplate.php?article=<?php echo $donnees['PressID']; ?>">Voir l'Article.</a>
+                                            <div id="<?php echo $donnees['Source']; ?>"></div>
                                             <div class="clear"></div>
                                         </div>
                                         <?php

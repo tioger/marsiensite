@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    if (!isset($_SESSION['admin'])) {
+    header ('Location: index.php');
+    exit();
+    }
+    ?>
+<?php
+include ("../bdd/localhostpdo/_mysql.php");
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>SIMPLonMARS or how learn to learn | Equipe</title>
+    <title>SIMPLonMARS or how learn to learn | Presse</title>
 	
 	<!-- core CSS -->
     <link href="css/bootstrap.min2.css" rel="stylesheet">
@@ -14,6 +24,7 @@
     <link href="css/animate.min.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/presse.css" rel="stylesheet">
 	
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -43,6 +54,33 @@
 				</a>
 			</p>
 		</div>
+        <div class="languagediv" id="bloc_article">
+            <?php  
+                include ("../bdd/localhostpdo/_mysql.php"); 
+                // On récupère tout le contenu de la table Tuto
+                $reponse = $bdd->query('SELECT * FROM Press');
+
+                // On affiche chaque entrée une à une
+                while ($donnees = $reponse->fetch())
+                {
+            ?>
+            <div class="container">
+                <h2><?php echo utf8_decode($donnees['Source']); ?></h2>
+                <h3><?php echo utf8_decode($donnees['Titre']); ?></h3>  
+                <p><span class="underline">Ecrit par</span> <span id="capitalize"> <?php echo $donnees['Auteur']; ?></span> | <span  class="underline">Publié le </span> <?php echo utf8_decode($donnees['DATE']); ?></p>
+                <p><?php echo utf8_decode($donnees['Contenu']); ?></p>
+                <p><a href="<?php echo $donnees['Lien']; ?>" target="blank">Lire la suite</a></p>
+                <div class="clear"></div>
+            </div>
+            <?php
+
+            }
+
+            $reponse->closeCursor(); // Termine le traitement de la requête
+
+            ?>
+            <!-- Fin Boucle pour affichage de tous les Tutos -->
+        </div>
 	</section>
 </body>
 </html>
