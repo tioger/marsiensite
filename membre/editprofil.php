@@ -250,7 +250,7 @@
                                                                                             <td>
                                                                                                 ';
                                                                                                 if(!empty($donnees["facebook"])){
-                                                                                                    echo '<i  class="sociaux fa fa-facebook-square fa-2x"></i><input type="text" style="width: 200;" name="facebbok" value="'; echo $donnees["facebook"]; echo'"><br>';} 
+                                                                                                    echo '<i  class="sociaux fa fa-facebook-square fa-2x"></i><input type="text" style="width: 200;" name="facebook" value="'; echo $donnees["facebook"]; echo'"><br>';} 
                                                                                                 else{ echo '';};
 
                                                                                                 if(!empty($donnees["twitter"])){
