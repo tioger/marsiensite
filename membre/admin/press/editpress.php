@@ -62,7 +62,7 @@
                         while ($donnees = $reponse->fetch())
                         {
                     ?>
-                    <?php if($_SESSION['login'] == $donnees['Auteur']){ 
+                    <?php if(isset($_SESSION['admin']) && $_SESSION['admin'] == 'admin'){ 
                             echo "<div id='content'>
                                     <form method='post' action='presstemplate.php?article="; echo $donnees['PressID']; echo"'>
 										<p>

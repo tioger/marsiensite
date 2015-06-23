@@ -40,20 +40,15 @@ include ("../bdd/localhostpdo/_mysql.php");
 <body>
 
     <?php include 'menu.php'; ?>
+    <div class="" style="background-color:#2e2e2e;">
+        <section class="title">
+            <div class="">
+                <h1>Ils parlent de nous</h1>
+                <p class="">SIMPLonMARS dans les médias</p>
+            </div>
+        </section>
+    </div>
 	<section id="equipe">
-        <div class="container">
-			<h1>SIMPLonMARS, la fabrique des codeurs, en route vers l'emploi</h1>
-				<div class="news-single-timedata">Publi&eacute; le jeudi 11 juin 2015</div>
-				<div class="news-single-img">
-					<a href="http://www.regionpaca.fr/index.php?eID=tx_cms_showpic&amp;file=fileadmin%2Fdocuments%2FPhotos%2FEmploi%2FActu_Simplon_0615.jpg&amp;md5=26e7ca05a66a7e693ec2f40bec852043f94fb63f&amp;parameters[0]=YTo0OntzOjU6IndpZHRoIjtzOjQ6IjgwMG0iO3M6NjoiaGVpZ2h0IjtzOjM6IjYw&amp;parameters[1]=MCI7czo3OiJib2R5VGFnIjtzOjQyOiI8Ym9keSBiZ0NvbG9yPSIjZmZmZmZmIiBz&amp;parameters[2]=dHlsZT0ibWFyZ2luOjA7Ij4iO3M6NDoid3JhcCI7czozNzoiPGEgaHJlZj0iamF2&amp;parameters[3]=YXNjcmlwdDpjbG9zZSgpOyI%2BIHwgPC9hPiI7fQ%3D%3D" target="thePicture"><img alt="" src="http://www.regionpaca.fr/typo3temp/pics/85c57d2f26.jpg" style="height:153px; width:330px" /></a></div>
-			<h2>Favoriser le retour &agrave; l&rsquo;emploi ou l&rsquo;entr&eacute;e dans la vie professionnelle de jeunes issus des quartiers prioritaires et en difficult&eacute; d&rsquo;insertion professionnelle, tel est l&rsquo;objectif du projet &laquo; SIMPLonMARS &raquo;, la formation port&eacute;e par Centrale Marseille et la fabrique sociale de codeurs Simplon.co.</h2>
-			<p>Les jeunes engag&eacute;s dans cette <strong>formation qualifiante</strong> d&rsquo;une dur&eacute;e de <strong>12 &agrave; 18 mois</strong> b&eacute;n&eacute;ficieront d&rsquo;un environnement stimulant et exigeant qui leur permettra de se familiariser avec les codes de la vie en entreprise et de leur faire profiter du parrainage b&eacute;n&eacute;vole d&rsquo;&eacute;tudiants centraliens.</p>
-			<p>
-				<a href="http://www.regionpaca.fr/actualites/detail-actualite/article/simplonmars-la-fabrique-des-codeurs-en-route-vers-lemploi.html">
-					<strong>en savoir +</strong>
-				</a>
-			</p>
-		</div>
         <div class="languagediv" id="bloc_article">
             <?php  
                 include ("../bdd/localhostpdo/_mysql.php"); 
@@ -66,11 +61,14 @@ include ("../bdd/localhostpdo/_mysql.php");
             ?>
             <div class="container">
                 <h2><?php echo utf8_decode($donnees['Source']); ?></h2>
-                <h3><?php echo utf8_decode($donnees['Titre']); ?></h3>  
-                <p><span class="underline">Ecrit par</span> <span id="capitalize"> <?php echo $donnees['Auteur']; ?></span> | <span  class="underline">Publié le </span> <?php echo utf8_decode($donnees['DATE']); ?></p>
+                <h3><?php echo $donnees['Titre']; ?></h3>  
+                <p class="dtat"><span class="underline">Ecrit par</span> <span id="capitalize"> <?php echo $donnees['Auteur']; ?></span> | <span  class="underline">Publié le </span> <?php echo utf8_decode($donnees['DATE']); ?></p>
                 <p><?php echo utf8_decode($donnees['Contenu']); ?></p>
-                <p><a href="<?php echo $donnees['Lien']; ?>" target="blank">Lire la suite</a></p>
+                <p><a href="<?php echo $donnees['Lien']; ?>" target="blank"><strong>Lire la suite</strong></a></p>
                 <div class="clear"></div>
+            </div>
+            <div class="hr">
+                <div class="sep"></div>
             </div>
             <?php
 
@@ -82,5 +80,6 @@ include ("../bdd/localhostpdo/_mysql.php");
             <!-- Fin Boucle pour affichage de tous les Tutos -->
         </div>
 	</section>
+    <?php include 'footer.php'; ?>
 </body>
 </html>
