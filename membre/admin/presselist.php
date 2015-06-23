@@ -78,7 +78,7 @@
                           <tr>
                             <td><a href="press/presstemplate.php?article=<?php echo $donnees['PressID'] ?>"><?php echo $donnees['PressID'] ?></a></td>
                             <td><?php echo utf8_decode($donnees['Source']) ?></td>
-                            <td><?php echo utf8_decode($donnees['Titre']) ?></td>
+                            <td><?php echo $donnees['Titre'] ?></td>
                             <td><?php echo utf8_decode($donnees['DATE']) ?></td>
                             <td>
                                 <a href="user.html"><i class="fa fa-pencil"></i></a>

@@ -42,7 +42,7 @@
 						<div class="single-profile wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
 							<div class="media">
 								<div class="pull-left blc-img-prof">
-									<a href="#"><img class="media-object" src="img/rodolphe.jpg" width="328" alt=""></a>
+									<a href="#"><img class="media-object" src="img/staff/roro.jpg" width="328" alt=""></a>
 								</div>
 								<div class="media-body">
 									<h4>Rodolphe</h4>

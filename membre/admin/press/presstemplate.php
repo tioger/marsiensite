@@ -94,7 +94,7 @@ if (isset($_POST['enregistrer']) && $_POST['enregistrer'] == 'Enregistrer') {
                         {
                     ?>
                     <div id="bartutotemp">
-                        <p id="titletutotemp"><?php echo utf8_decode($donnees['Titre']) ?></p>
+                        <p id="titletutotemp"><?php echo $donnees['Titre'] ?></p>
                         <?php if(isset($_SESSION['admin']) && $_SESSION['admin'] == 'admin'){ 
                             echo "<div id='edit'>
                                     <a class='btnedit' href='editpress.php?article="; echo $donnees['PressID']; echo"'>Editer</a>
