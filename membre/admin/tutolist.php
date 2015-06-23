@@ -74,7 +74,7 @@
                             {
                           ?>
                           <tr>
-                            <td><a href="../tuto/tutotemplate.php?tuto=<?php echo $donnees['tutoid'] ?>"><?php echo $donnees['id'] ?></a></td>
+                            <td><a href="../tuto/tutotemplate.php?tuto=<?php echo $donnees['id'] ?>"><?php echo $donnees['id'] ?></a></td>
                             <td><?php echo utf8_decode($donnees['name']) ?></td>
                             <td><?php echo utf8_decode($donnees['author']) ?></td>
                             <td><?php echo utf8_decode($donnees['language']) ?></td>
@@ -115,7 +115,7 @@
                             {
                           ?>
                           <tr>
-                            <td><a href="../tuto/tutotemplate.php?tuto=<?php echo $donnees['tutoid'] ?>"><?php echo $donnees['id'] ?></a></td>
+                            <td><a href="../tuto/tutotemplate.php?tuto=<?php echo $donnees['id'] ?>"><?php echo $donnees['id'] ?></a></td>
                             <td><?php echo utf8_decode($donnees['name']) ?></td>
                             <td><?php echo utf8_decode($donnees['author']) ?></td>
                             <td><?php echo utf8_decode($donnees['language']) ?></td>
