@@ -171,8 +171,8 @@
                                                                     </div>
                                                                     <div class="panel-body">
                                                                         <div class="row">
-                                                                            <div class="col-md-3 col-lg-3 " align="center">
-                                                                                <img width="330" alt="User Pic" src="';if(!empty($donnees["imgprofil"])){ echo $donnees["imgprofil"];} else{ echo "img/default.png";}; echo '" >
+                                                                            <div class="col-md-3 col-lg-3 profil_pick " align="center">
+                                                                                <img  alt="User Pic" src="';if(!empty($donnees["imgprofil"])){ echo $donnees["imgprofil"];} else{ echo "img/default.png";}; echo '" >
                                                                                 <h3>Modifier votre image de Profil</h3>
                                                                                 <input id="input" type="text" name="imgpreview" value="'; echo $donnees["imgprofil"];echo '">
                                                                                 <!-- Button trigger modal -->
@@ -251,15 +251,15 @@
                                                                                                 ';
                                                                                                 if(!empty($donnees["facebook"])){
                                                                                                     echo '<i  class="sociaux fa fa-facebook-square fa-2x"></i><input type="text" style="width: 200;" name="facebook" value="'; echo $donnees["facebook"]; echo'"><br>';} 
-                                                                                                else{ echo '';};
+                                                                                                else{ echo '<i  class="sociaux fa fa-facebook-square fa-2x"></i><input type="text" style="width: 200;" name="facebook" value="NC"><br>';};
 
                                                                                                 if(!empty($donnees["twitter"])){
                                                                                                     echo '<i  class="sociaux fa fa-twitter-square fa-2x"></i><input type="text" style="width: 200;" name="twitter" value="'; echo $donnees["twitter"]; echo'"><br>';} 
-                                                                                                else{ echo '';};
+                                                                                                else{ echo '<i  class="sociaux fa fa-twitter-square fa-2x"></i><input type="text" style="width: 200;" name="twitter" value="NC"><br>';};
 
                                                                                                 if(!empty($donnees["linkedin"])){
                                                                                                     echo '<i  class="sociaux fa fa-linkedin-square fa-2x"></i><input type="text" style="width: 200;" name="linkedin" value="'; echo $donnees["linkedin"]; echo'">';} 
-                                                                                                else{ echo '';};
+                                                                                                else{ echo '<i  class="sociaux fa fa-linkedin-square fa-2x"></i><input type="text" style="width: 200;" name="linkedin" value="NC">';};
                                                                                             
                                                                                             echo '
                                                                                             </td> 
@@ -303,7 +303,7 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <h1 class="page-header">
-                                                    <small>Votre</small>Profil
+                                                    Modifier Votre Profil
                                                 </h1>
                                             </div>
                                         </div>
@@ -316,108 +316,119 @@
                                                     <div class="panel-body">
                                                         <div id="listcadre">
                                                             <div class="panel panel-info" style="margin-bottom: 0px;">
-                                                                <div class="panel-heading" >
-                                                                    <div style="float:left;width:330px">
-                                                                        <h3 class="panel-title" style="color:black;text-align:center">'; if(!empty($donnees["lastname"])){ echo $donnees["lastname"];} else{ echo "Nom : NC  ";};echo ' '; if(!empty($donnees["firstname"])){ echo $donnees["firstname"];} else{ echo "Prénom : NC  ";}; echo'</h3>
+                                                                <form method="post" action="editprofil.php">
+                                                                    <div class="panel-heading" >
+                                                                        <div style="float:left;">
+                                                                            <h3 class="panel-title" style="color:black;text-align:center">Prenom : <input type="text" name="lastname" value="'; if(!empty($donnees["lastname"])){ echo $donnees["lastname"];} else{ echo "Nom : NC  ";};echo '"> Nom : <input type="texte" name="firstname" value="'; if(!empty($donnees["firstname"])){ echo $donnees["firstname"];} else{ echo "Prénom : NC  ";}; echo'"></h3> 
+                                                                        </div>
+                                                                        <div style="clear:both;"></div>
                                                                     </div>
-                                                                    <div style="float:right;">
-                                                                        <a href="edit.html" >Edit Profile</a>
-                                                                    </div>
-                                                                    <div style="clear:both;"></div>
-                                                                </div>
-                                                                <div class="panel-body">
-                                                                    <div class="row">
-                                                                        <div class="col-md-3 col-lg-3 " align="center"> <img width="330" alt="User Pic" src="';if(!empty($donnees["imgprofil"])){ echo $donnees["imgprofil"];} else{ echo "img/default.png";}; echo '" > </div>
-                                                                        <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
-                                                                          <dl>
-                                                                            <dt>DEPARTMENT:</dt>
-                                                                            <dd>Administrator</dd>
-                                                                            <dt>HIRE DATE</dt>
-                                                                            <dd>11/12/2013</dd>
-                                                                            <dt>DATE OF BIRTH</dt>
-                                                                               <dd>11/12/2013</dd>
-                                                                            <dt>GENDER</dt>
-                                                                            <dd>Male</dd>
-                                                                          </dl>
-                                                                        </div>-->
-                                                                        <div class=" col-md-9 col-lg-9 "> 
-                                                                            <table class="table table-user-information">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                    </tr>
-                                                                                    <tr> 
-                                                                                        <td style="border-top:0px;">';if(!empty($donnees["describ"])){ echo $donnees["describ"];} else{ echo "Description : NC  ";}; echo '</td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>Mes Technos</td>
-                                                                                        <td>';
-                                                                                        if(!empty($donnees["technos"])){ 
-                                                                                            $technos = $donnees["technos"];
-                                                                                            $keywords = preg_split("/[\s,]+/", $technos);
-                                                                                                foreach ($keywords as &$value) {
-                                                                                                    echo '<li class="bulle">
-                                                                                                            <p class="perk">'; echo $value ; echo '</p>
-                                                                                                          </li>';
-                                                                                                }
-                                                                                            } 
-                                                                                            else{ echo '<li class="bulle">
-                                                                                                    <p class="perk">Technos: NC</p>
-                                                                                                </li>';};     
-                                                                                        echo '</td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>Structure</td>
-                                                                                        <td>';if(!empty($donnees["structure"])){ echo $donnees["structure"];} else{ echo " NC  ";}; echo '</td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>Promo.</td>
-                                                                                        <td>';if(!empty($donnees["promo"])){ echo $donnees["promo"];} else{ echo " NC  ";}; echo '</td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-md-3 col-lg-3 profil_pick" align="center">
+                                                                                <img  alt="User Pic" src="';if(!empty($donnees["imgprofil"])){ echo $donnees["imgprofil"];} else{ echo "img/default.png";}; echo '" >
+                                                                                <h3>Modifier votre image de Profil</h3>
+                                                                                <input id="input" type="text" name="imgpreview" value="'; echo $donnees["imgprofil"];echo '">
+                                                                                <!-- Button trigger modal -->
+                                                                                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="apercu()">
+                                                                                  Aperçu
+                                                                                </button>
+                                                                                <!-- Modal -->
+                                                                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                                                  <div class="modal-dialog" role="document">
+                                                                                    <div class="modal-content">
+                                                                                      <div class="modal-header">
+                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                                        <h4 class="modal-title" id="myModalLabel">Aperçu</h4>
+                                                                                      </div>
+                                                                                      <form method="post" action="editprofil.php">
+                                                                                        <div class="modal-body">
+                                                                                            <div id="modale"></div>
+                                                                                            <div id="envoiimg"></div>
+                                                                                        </div>
+                                                                                        <div class="modal-footer">
+                                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                                                                            <input type="submit" name="imgup" class="btn btn-primary" value="Enregistrer">
+                                                                                        </div>
+                                                                                      </form>
+                                                                                    </div>
+                                                                                  </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+
+                                                                            <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
+                                                                              <dl>
+                                                                                <dt>DEPARTMENT:</dt>
+                                                                                <dd>Administrator</dd>
+                                                                                <dt>HIRE DATE</dt>
+                                                                                <dd>11/12/2013</dd>
+                                                                                <dt>DATE OF BIRTH</dt>
+                                                                                   <dd>11/12/2013</dd>
+                                                                                <dt>GENDER</dt>
+                                                                                <dd>Male</dd>
+                                                                              </dl>
+                                                                            </div>-->
+                                                                            <div class=" col-md-9 col-lg-9 "> 
+                                                                                <table class="table table-user-information">
+                                                                                    <tbody>
                                                                                         <tr>
-                                                                                            <td>Email</td>
-                                                                                            <td>';
-                                                                                            if(!empty($donnees["email"])){
-                                                                                                echo '<a href="mailto:';echo $donnees["email"]; echo '">';
-                                                                                                echo $donnees["email"];
-                                                                                                echo'</a>';
-                                                                                            } 
-                                                                                            else{ echo " NC  ";}; 
-                                                                                      echo '</td>
                                                                                         </tr>
-                                                                                        
-                                                                                        <td>
-                                                                                            ';
-                                                                                            if(!empty($donnees["facebook"])){
-                                                                                                echo '<a href="https://www.facebook.com/'; echo $donnees["facebook"];echo '"><i  class="sociaux fa fa-facebook-square fa-2x"></i></a>';} 
-                                                                                            else{ echo '';};
+                                                                                        <tr> 
+                                                                                            <td style="border-top:0px;">Description ou Slogan : <input type="text" style="width: 400;" name="describ" value="';if(!empty($donnees["describ"])){ echo $donnees["describ"];} else{ echo "Description : NC  ";}; echo '"></td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>Mes Technos( les séparer par un espace)</td>
+                                                                                            <td><input type="text" style="width: 400;" name="technos" value="';if(!empty($donnees["technos"])){ echo $donnees["technos"];} else{ echo " NC  ";}; echo '"></td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>Structure</td>
+                                                                                            <td><input type="text" style="width: 400;" name="structure" value="';if(!empty($donnees["structure"])){ echo $donnees["structure"];} else{ echo " NC  ";}; echo '"></td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>Promo.</td>
+                                                                                            <td><input type="text" style="width: 400;" name="promo" value="';if(!empty($donnees["promo"])){ echo $donnees["promo"];} else{ echo " NC  ";}; echo '"></td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            
+                                                                                            <tr>
+                                                                                                <td>Email</td>
+                                                                                                <td><input type="text" style="width: 400;" name="email" value="';
+                                                                                                if(!empty($donnees["email"])){
+                                                                                                    echo $donnees["email"]; echo '">';
+                                                                                                } 
+                                                                                                else{ echo " NC  ";}; 
+                                                                                          echo '</td>
+                                                                                            </tr>
+                                                                                            
+                                                                                            <td>
+                                                                                                ';
+                                                                                                if(!empty($donnees["facebook"])){
+                                                                                                    echo '<i  class="sociaux fa fa-facebook-square fa-2x"></i><input type="text" style="width: 200;" name="facebook" value="'; echo $donnees["facebook"]; echo'"><br>';} 
+                                                                                                else{ echo '<i  class="sociaux fa fa-facebook-square fa-2x"></i><input type="text" style="width: 200;" name="facebook" value="NC"><br>';};
 
-                                                                                            if(!empty($donnees["twitter"])){
-                                                                                                echo '<a href="https://twitter.com/'; echo $donnees["twitter"];echo '"><i  class="sociaux fa fa-twitter-square fa-2x"></i></a>';} 
-                                                                                            else{ echo '';};
+                                                                                                if(!empty($donnees["twitter"])){
+                                                                                                    echo '<i  class="sociaux fa fa-twitter-square fa-2x"></i><input type="text" style="width: 200;" name="twitter" value="'; echo $donnees["twitter"]; echo'"><br>';} 
+                                                                                                else{ echo '<i  class="sociaux fa fa-twitter-square fa-2x"></i><input type="text" style="width: 200;" name="twitter" value="NC"><br>';};
 
-                                                                                            if(!empty($donnees["linkedin"])){
-                                                                                                echo '<a href="'; echo $donnees["linkedin"];echo '"><i  class="sociaux fa fa-linkedin-square fa-2x"></i></a>';} 
-                                                                                            else{ echo '';};
-                                                                                        
-                                                                                        echo '
-                                                                                        </td> 
-                                                                                        <td></td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                            <a href="#" class="btn btn-primary">Mes Tutos</a>
-                                                                            <a href="#" class="btn btn-primary">Mon Site Web</a>
+                                                                                                if(!empty($donnees["linkedin"])){
+                                                                                                    echo '<i  class="sociaux fa fa-linkedin-square fa-2x"></i><input type="text" style="width: 200;" name="linkedin" value="'; echo $donnees["linkedin"]; echo'">';} 
+                                                                                                else{ echo '<i  class="sociaux fa fa-linkedin-square fa-2x"></i><input type="text" style="width: 200;" name="linkedin" value="NC">';};
+                                                                                            
+                                                                                            echo '
+                                                                                            </td> 
+                                                                                            <td></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                                <div style="width: 234px; margin: 200px auto auto;" >
+                                                                                <input type="submit" name="confirmedit" class="btn btn-primary" value="Enregistrer les Modifications">
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                                <div class="panel-body" style="border-top: 1px solid #DDD;">
-                                                                    <div style="background-color:black;">
-                                                                        <h2></h2>
-                                                                    </div>
-
-                                                                </div>
+                                                                </form>
+                                                                
                                                                 <div class="panel-footer">
                                                                     <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
                                                                     <span class="pull-right">
@@ -458,15 +469,15 @@
     <script src="js/plugins/morris/raphael.min.js"></script>
     <script src="js/plugins/morris/morris.min.js"></script>
     <script src="js/plugins/morris/morris-data.js"></script>
-        <script type="text/javascript">
-            function I(i){
-            return document.getElementById(i);
-    };
+    <script type="text/javascript">
+        function I(i){
+        return document.getElementById(i);
+        };
 
-function apercu() {
-    I("modale").innerHTML = "<div><img src='" + I("input").value + "'></img></div>";
-    I("envoiimg").innerHTML = "<input type='hidden' name='imgprofil' value='" + I("input").value + "'>";
-};
+        function apercu() {
+            I("modale").innerHTML = "<div><img src='" + I("input").value + "'></img></div>";
+            I("envoiimg").innerHTML = "<input type='hidden' name='imgprofil' value='" + I("input").value + "'>";
+        };
     </script
 
 </body>

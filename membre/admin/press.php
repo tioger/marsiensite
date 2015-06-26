@@ -106,7 +106,7 @@
                                             {
                                         ?>
                                         <div id="tutocadre">
-                                            <p><span class="underline">Titre de l'Article :</span> <?php echo utf8_decode($donnees['Titre']); ?>  <span class="underline">Créé par</span> <i class='fa fa-fw fa-user'></i><span id="capitalize"> <?php echo $donnees['Auteur']; ?></span> </p>
+                                            <p><span class="underline">Titre de l'Article :</span> <?php echo $donnees['Titre']; ?>  <span class="underline">Créé par</span> <i class='fa fa-fw fa-user'></i><span id="capitalize"> <?php echo $donnees['Auteur']; ?></span> </p>
                                             <p><span  class="underline">Date :</span> <?php echo utf8_decode($donnees['DATE']); ?></p>
                                             <a href="press/presstemplate.php?article=<?php echo $donnees['PressID']; ?>">Voir l'Article.</a>
                                             <div id="<?php echo $donnees['Source']; ?>"></div>
@@ -125,7 +125,7 @@
                                         <h3>Tous Nos Articles</h3>
                                         <!-- Debut Boucle pour affichage de tous les Tutos en ligne-->
                                         <?php  
-                                           include ("../../bdd/localhostpdo/_mysql.php"); 
+                                           include ("../../../bdd/localhostpdo/_mysql.php"); 
                                             // On récupère tout le contenu de la table Tuto
                                             $reponse = $bdd->query('SELECT * FROM Press');
 
@@ -134,7 +134,7 @@
                                             {
                                         ?>
                                         <div id="tutocadre">
-                                            <p><span class="underline">Titre de l'Article :</span> <?php echo utf8_decode($donnees['Titre']); ?>  <span class="underline">Créé par</span> <i class='fa fa-fw fa-user'></i><span id="capitalize"> <?php echo $donnees['Auteur']; ?></span> </p>
+                                            <p><span class="underline">Titre de l'Article :</span> <?php echo $donnees['Titre']; ?>  <span class="underline">Créé par</span> <i class='fa fa-fw fa-user'></i><span id="capitalize"> <?php echo $donnees['Auteur']; ?></span> </p>
                                             <p><span  class="underline">Date :</span> <?php echo utf8_decode($donnees['DATE']); ?></p>
                                             <a href="press/presstemplate.php?article=<?php echo $donnees['PressID']; ?>">Voir l'Article.</a>
                                             <div id="<?php echo $donnees['Source']; ?>"></div>

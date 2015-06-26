@@ -229,3 +229,7 @@ ul.alert-dropdown {
 #dmwidth{
     min-width: 190px !important;
 }
+
+.borderwhite{
+    border-top: 1px  white solid ;
+}
