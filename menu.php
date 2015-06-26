@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-xs-4">
-                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div>
+                        <div class="top-number"><p><i class="fa fa-envelope-o"></i>mathilde.chaboche@centrale-marseille.fr</p></div>
                     </div>
                     <div class="col-sm-6 col-xs-8">
                        <div class="social">

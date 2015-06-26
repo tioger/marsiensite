@@ -124,7 +124,11 @@ a:focus {
 }
 
 body > section {
-  padding: 70px 0;
+  padding: 30px 0;
+}
+
+#about-us{
+  padding-top: 70px !important;
 }
 
 .center {
@@ -204,6 +208,10 @@ body > section {
 
 .top-number p{
   margin: 0
+}
+
+.top-number i{
+  margin-right: 10px;
 }
 
 .social{
@@ -974,7 +982,7 @@ a.accordion-toggle  i{
 }
 
 #partner {
-  background: url(../images/partners/partner_bg.png) 50% 50% no-repeat;
+  background: url(../img/cover.jpg) 50% 50% no-repeat;
   background-size: cover;
 }
 
@@ -1268,9 +1276,11 @@ ul.social_icons li  a i{
 }
 
 
+.team .social_icons .fa-envelope-o:hover,
 .team .social_icons .fa-facebook:hover, 
 .team .social_icons .fa-twitter:hover, 
-.team .social_icons .fa-google-plus:hover {
+.team .social_icons .fa-linkedin:hover,
+.team .social_icons .fa-github:hover {
   transform: rotate(360deg);
   -ms-transform:rotate(360deg);
   -webkit-transform:rotate(360deg); 
@@ -1283,17 +1293,24 @@ ul.social_icons li  a i{
   -webkit-transition: all 0.9s ease 0s;
   -o-transition: all 0.9s ease 0s;
 }
+.team .social_icons .fa-envelope-o {
+  background: #C90108;
+}
 
 .team .social_icons .fa-facebook {
   background: #0182c4;
 }
 
 .team .social_icons .fa-twitter {
-  background: #20B8FF
+  background: #20B8FF;
 }
 
-.team .social_icons .fa-google-plus {
-  background: #D34836
+.team .social_icons .fa-linkedin{
+  background: #013B00;
+}
+
+.team .social_icons .fa-github {
+  background: #000;
 }
 
 .team-bar .first-one-arrow hr {
@@ -2467,48 +2484,12 @@ shortcodes page css
 /***********************
 ********* Footer ******
 ************************/
-#bottom {
-  background: #f5f5f5;
-  border-bottom: 5px solid #c52d2f;
-  font-size: 14px;
-}
-
-#bottom h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  font-size:22px;
-  color: #000;
-}
-
-#bottom ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#bottom ul li {
-  display: block;
-  padding: 5px 0;
-}
-
-#bottom ul li a {
-  color: #808080;
-}
-
-#bottom ul li a:hover {
-  color: #c52d2f;
-}
-
-#bottom .widget {
-  margin-bottom: 0;
-}
-
 #footer {
   padding-top: 30px;
   padding-bottom: 30px;
   color: #fff;
   background: #2e2e2e;
+  border-top: 5px solid #c52d2f;
 }
 
 #footer a {

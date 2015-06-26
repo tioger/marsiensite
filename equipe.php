@@ -60,7 +60,7 @@
 									</ul>
 								</div>
 							</div><!--/.media -->
-							<p>un mec parfait avec plein de défauts..... je suis iremplacablement inutile a la société ...
+							<p>Un mec parfait avec plein de défauts..... Je suis iremplacablement inutile a la société ...
 Rodolphe est une personnification de la puissance.</p>
 						</div>
 					</div><!--/.col-lg-4 -->	
@@ -70,16 +70,16 @@ Rodolphe est une personnification de la puissance.</p>
 						<div class="single-profile wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
 							<div class="media">
 								<div class="pull-left blc-img-prof">
-									<a href="#"><img class="media-object" src="img/rodolphe.jpg" width="328" alt=""></a>
+									<a href="#"><img class="media-object" src="img/staff/ma.jpg" width="328" alt=""></a>
 								</div>
 								<div class="media-body">
-									<h4>Rodolphe</h4>
-									<h5>Formateur & jeune à la retraite</h5>
+									<h4>Mathilde</h4>
+									<h5>Chapeauteuse de Projets</h5>
 									<ul class="tag clearfix">
-										<li class="btn"><a href="#">Web</a></li>
-										<li class="btn"><a href="#">Ui</a></li>
-										<li class="btn"><a href="#">Ux</a></li>
-										<li class="btn"><a href="#">Photoshop</a></li>
+										<li class="btn"><a href="#"></a></li>
+										<li class="btn"><a href="#"></a></li>
+										<li class="btn"><a href="#"></a></li>
+										<li class="btn"><a href="#"></a></li>
 									</ul>
 									<ul class="social_icons">
 										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -88,8 +88,7 @@ Rodolphe est une personnification de la puissance.</p>
 									</ul>
 								</div>
 							</div><!--/.media -->
-							<p>un mec parfait avec plein de défauts..... je suis iremplacablement inutile a la société ...
-Rodolphe est une personnification de la puissance.</p>
+							<p></p>
 						</div>
 					</div><!--/.col-lg-4 -->			
 				</div> <!--/.row -->
@@ -113,17 +112,17 @@ Rodolphe est une personnification de la puissance.</p>
 						<div class="single-profile wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
 							<div class="media">
 								<div class="pull-left blc-img-prof">
-									<a href="#"><img class="media-object" src="img/rodolphe.jpg" width="328" alt=""></a>
+									<a href="#"><img class="media-object" src="img/staff/gu.jpg" width="328" alt=""></a>
 								</div>
 
 								<div class="media-body">
-									<h4>Rodolphe</h4>
-									<h5>Formateur & jeune à la retraite</h5>
+									<h4>Guillaume</h4>
+									<h5></h5>
 									<ul class="tag clearfix">
-										<li class="btn"><a href="#">Web</a></li>
-										<li class="btn"><a href="#">Ui</a></li>
-										<li class="btn"><a href="#">Ux</a></li>
-										<li class="btn"><a href="#">Photoshop</a></li>
+										<li class="btn"><a href="#"></a></li>
+										<li class="btn"><a href="#"></a></li>
+										<li class="btn"><a href="#"></a></li>
+										<li class="btn"><a href="#"></a></li>
 									</ul>
 									<ul class="social_icons">
 										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -132,24 +131,23 @@ Rodolphe est une personnification de la puissance.</p>
 									</ul>
 								</div>
 							</div><!--/.media -->
-							<p>un mec parfait avec plein de défauts..... je suis iremplacablement inutile a la société ...
-Rodolphe est une personnification de la puissance.</p>
+							<p></p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6 col-md-offset-2">
 						<div class="single-profile wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
 							<div class="media">
 								<div class="pull-left blc-img-prof">
-									<a href="#"><img class="media-object" src="img/rodolphe.jpg" width="328" alt=""></a>
+									<a href="#"><img class="media-object" src="img/staff/le.jpg" width="328" alt=""></a>
 								</div>
 								<div class="media-body">
-									<h4>Rodolphe</h4>
-									<h5>Formateur & jeune à la retraite</h5>
+									<h4>Laeticia</h4>
+									<h5>Scrib Digital</h5>
 									<ul class="tag clearfix">
-										<li class="btn"><a href="#">Web</a></li>
-										<li class="btn"><a href="#">Ui</a></li>
-										<li class="btn"><a href="#">Ux</a></li>
-										<li class="btn"><a href="#">Photoshop</a></li>
+										<li class="btn"><a href="#"></a></li>
+										<li class="btn"><a href="#"></a></li>
+										<li class="btn"><a href="#"></a></li>
+										<li class="btn"><a href="#"></a></li>
 									</ul>
 									<ul class="social_icons">
 										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -158,8 +156,7 @@ Rodolphe est une personnification de la puissance.</p>
 									</ul>
 								</div>
 							</div><!--/.media -->
-							<p>un mec parfait avec plein de défauts..... je suis iremplacablement inutile a la société ...
-Rodolphe est une personnification de la puissance.</p>
+							<p></p>
 						</div>
 					</div>
 				</div>	<!--/.row-->

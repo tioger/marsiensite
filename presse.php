@@ -1,11 +1,4 @@
 <?php
-    session_start();
-    if (!isset($_SESSION['admin'])) {
-    header ('Location: index.php');
-    exit();
-    }
-    ?>
-<?php
 include ("../bdd/localhostpdo/_mysql.php");
 ?>
 <!DOCTYPE html>
