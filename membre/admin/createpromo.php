@@ -16,8 +16,8 @@
             $compteur = 0;
             while ($compteur != $nbparticipant) {
               $compteur ++;
-              $req = $bdd->prepare("UPDATE Students SET firstname=:firstname, lastname=:lastname, picture=:picture, technos=:technos, describ=:describ, facebook=:facebook, twitter=:twitter, linkedin=:linkedin, github=:github, email=:email, promo=:promo WHERE idstudent=:idstudent AND promo=".$_GET['year']);
-              $req->execute(array(
+              $req = $bdd->prepare("INSERT INTO Students(id, idstudent, firstname, lastname, picture, technos, describ, facebook, twitter, linkedin, github, email, promo) VALUES(:id, :idstudent, :firstname, :lastname, :picture, :technos, :describ, :facebook, :twitter, :linkedin, :github, :email, :promo)");
+          $req->execute(array(
             "id" => "",
             "idstudent" => $compteur,
             "firstname" => $_POST['firstname'.$compteur],
@@ -109,47 +109,38 @@
                                                             while ($donnees = $reponse->fetch())
                                                             {
                                                           ?>
-                                                          <form method="post" action="editpromo.php?year=<?php echo $_GET['year']; ?>">
+                                                          <form method="post" action="createpromo.php?year=<?php echo $_GET['year']; ?>">
                                                               <?php 
                                                                 $nbparticipant = $donnees['nbparticipant'];
                                                                 $compteur = 0;
                                                                 while ($compteur != $nbparticipant) {
-                                                                  $compteur ++; 
-                                                                    $reponse = $bdd->query("SELECT * FROM Students WHERE idstudent=".$compteur." AND promo =".$_GET['year']);
-                                                                    while ($donnees2 = $reponse->fetch())
-                                                                    {
-                                                                ?>
-                                                                    <div class="panel panel-info" style="margin-bottom: 0px;">
-                                                                        
-                                                                            <div class="promolist" >
-                                                                                <div >
-                                                                                    <h3 class="panel-title" style="color:black;text-align:center"> <h2>Etudiant N° <?php echo $compteur; ?></h2>     Prenom : <input type="text" name="lastname<?php echo $compteur; ?>" value="<?php echo $donnees2['lastname']; ?>"> Nom : <input type="texte" name="firstname<?php echo $compteur; ?>" value="<?php echo $donnees2['firstname']; ?>"></h3>
-                                                                                    <div style="clear:both;"></div>
-                                                                                    <div style="float:left">Photo : <input  style="width: 400;" type="text" name="picture<?php echo $compteur; ?>" value="<?php echo $donnees2['picture']; ?>"></div>
-                                                                                    <div style="float:right">Technos( les séparer par un espace): <input type="text" style="width: 400;" name="technos<?php echo $compteur; ?>" value="<?php echo $donnees2['technos']; ?>"></div><br>
-                                                                                    <div style="float:left">Description: <input type="text" style="width: 400;" name="describ<?php echo $compteur; ?>" value="<?php echo $donnees2['describ']; ?>"></div>
-                                                                                    <div style="float:right">Email: <input type="text" style="width: 400;" name="email<?php echo $compteur; ?>" value="<?php echo $donnees2['email']; ?>"></div><br>
-                                                                                    <div style="clear:both;"></div>
-                                                                                    <div style="float:left">
-                                                                                     <i  class="sociaux fa fa-facebook-square fa-2x"></i> <input type="text" style="width: 200;" name="facebook<?php echo $compteur; ?>" value="<?php echo $donnees2['facebook']; ?>">
-                                                                                     <i  class="sociaux fa fa-twitter-square fa-2x"></i> <input type="text" style="width: 200;" name="twitter<?php echo $compteur; ?>" value="<?php echo $donnees2['twitter']; ?>"><br>
-                                                                                     </div>
-                                                                                     <div style="float:right">
-                                                                                       <i  class="sociaux fa fa-linkedin-square fa-2x"></i> <input type="text" style="width: 200;" name="linkedin<?php echo $compteur; ?>" value="<?php echo $donnees2['linkedin']; ?>">
-                                                                                       <i  class="sociaux fa fa-github-square fa-2x"></i> <input type="text" style="width: 200;" name="github<?php echo $compteur; ?>" value="<?php echo $donnees2['github']; ?>"><br>
-                                                                                       </div>
-                                                                                    <input type="hidden" name="promo" value="<?php echo $_GET['year']; ?>">
-                                                                                </div>
+                                                                  $compteur ++;
+                                                                
+                                                               ?>
+                                                                    <div class="panel panel-info" style="margin-bottom: 0px;"> 
+                                                                        <div class="promolist" >
+                                                                            <div >
+                                                                                <h3 class="panel-title" style="color:black;text-align:center"> <h2>Etudiant N° <?php echo $compteur; ?></h2>     Prenom : <input type="text" name="lastname<?php echo $compteur; ?>" value=""> Nom : <input type="texte" name="firstname<?php echo $compteur; ?>" value=""></h3>
                                                                                 <div style="clear:both;"></div>
+                                                                                <div style="float:left">Photo : <input  style="width: 400;" type="text" name="picture<?php echo $compteur; ?>" value=""></div>
+                                                                                <div style="float:right">Technos( les séparer par un espace): <input type="text" style="width: 400;" name="technos<?php echo $compteur; ?>" value=""></div><br>
+                                                                                <div style="float:left">Description: <input type="text" style="width: 400;" name="describ<?php echo $compteur; ?>" value=""></div>
+                                                                                <div style="float:right">Email: <input type="text" style="width: 400;" name="email<?php echo $compteur; ?>" value=""></div><br>
+                                                                                <div style="clear:both;"></div>
+                                                                                <div style="float:left">
+                                                                                 <i  class="sociaux fa fa-facebook-square fa-2x"></i> <input type="text" style="width: 200;" name="facebook<?php echo $compteur; ?>" value="">
+                                                                                 <i  class="sociaux fa fa-twitter-square fa-2x"></i> <input type="text" style="width: 200;" name="twitter<?php echo $compteur; ?>" value=""><br>
+                                                                                </div>
+                                                                                <div style="float:right">
+                                                                                   <i  class="sociaux fa fa-linkedin-square fa-2x"></i> <input type="text" style="width: 200;" name="linkedin<?php echo $compteur; ?>" value="">
+                                                                                   <i  class="sociaux fa fa-github-square fa-2x"></i> <input type="text" style="width: 200;" name="github<?php echo $compteur; ?>" value=""><br>
+                                                                                </div>
+                                                                                <input type="hidden" name="promo" value="<?php echo $_GET['year'] ?>">
                                                                             </div>
-                                                                            
-                                                                        
-                                                                        
-                                                                       
+                                                                            <div style="clear:both;"></div>
+                                                                        </div>
                                                                     </div>
-                                                                 <?php  
-                                                                    }
-                                                                 ?>
+                                                                 
                                                                 <?php 
                                                                   }
                                                                 ?>

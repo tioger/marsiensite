@@ -4,7 +4,23 @@
     header ('Location: ../index.php');
     exit();
     }
-    ?>
+?>
+<?php 
+include ("../../../bdd/localhostpdo/_mysql.php");
+  if(isset($_POST['creer']) && $_POST['creer'] == 'Créer'){
+        // On récupère tout le contenu de la table commentary
+              $req = $bdd->prepare("INSERT INTO Promos(id, year, nbparticipant) VALUES(:id, :year, :nbparticipant)");
+          $req->execute(array(
+            "id" => "",
+            "year" => $_POST['year'],
+            "nbparticipant" => $_POST['nbparticipant']));
+           header('Location: createpromo.php?year='.$_POST['year']);
+          exit();
+            }
+        
+       
+    
+ ?>
 <html lang="fr">
 
 <head>
@@ -54,8 +70,33 @@
             <div class="container-fluid" style="padding-right:0px;padding-left:0px;">
                 <div id="tutocadre" style="padding-top: 10px;border:1px black solid;border-radius: 20px 20px 20px 20px;">
                   <div class="btn-toolbar" id="toolbarbtn">
-                      <a href="ajoutmembre.php"><button class="btn btn-primary">Nouvel Utilisateur</button></a>
-                      <a href="ajoutadmin.php"><button class="btn btn-primary">Nouvel Admin</button></a>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        Nouvelle Promo
+                      </button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <form method="POST" action="promos.php">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Annuler"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Créer une Nouvelle Promo</h4>
+                              </div>
+                              <div class="modal-body">
+                                <div>Année Promo : <input type="text" name="year" value=""></div>
+                                <div>Nombre de Participant : <input type="text" name="nbparticipant" value=""></div>
+
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                <input type="submit"  name="creer" value="Créer" class="btn btn-primary">
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
                   </div>
                   <div class="well">
                       <table class="table">
