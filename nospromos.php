@@ -67,7 +67,7 @@ include ("../bdd/localhostpdo/_mysql.php");
 							<div class="single-profile wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
 								<div class="media">
 									<div class="pull-left blc-img-prof">
-										<a href="#"><img class="media-object" src="img/promo/2015/<?php echo $compteur?>.jpg" width="328" alt=""></a>
+										<a href="#"><img class="media-object" src="img/promo/<?php echo $donnees['year'] ?>/<?php echo $compteur?>.jpg" width="328" alt=""></a>
 									</div>
 									<div class="media-body">
 										<h4><?php echo $donnees2['lastname'] ?> </h4>
