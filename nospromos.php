@@ -1,3 +1,6 @@
+<?php 
+include ("../bdd/localhostpdo/_mysql.php");
+ ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -37,35 +40,65 @@
 					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
 				</div>
 
-				<div class="row clearfix homer">	
-					<div class="col-md-3 col-sm-3 profil">	
-						<div class="single-profile wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-							<div class="media">
-								<div class="pull-left blc-img-prof">
-									<a href="#"><img class="media-object" src="img/rodolphe.jpg" width="328" alt=""></a>
-								</div>
-								<div class="media-body">
-									<h4>Rodolphe</h4>
-									<h5>Formateur & jeune à la retraite</h5>
-									<ul class="tag clearfix">
-										<li class="btn"><a href="#">Web</a></li>
-										<li class="btn"><a href="#">Ui</a></li>
-										<li class="btn"><a href="#">Ux</a></li>
-										<li class="btn"><a href="#">Photoshop</a></li>
-									</ul>
-									<ul class="social_icons">
-										<li><a href="#"><i class="fa fa-envelope-o"></i></a></li> 
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-										<li><a href="#"><i class="fa fa-github"></i></a></li>  
-									</ul>
-								</div>
-							</div><!--/.media -->
-							<p>un mec parfait avec plein de défauts..... je suis iremplacablement inutile a la société ...
-Rodolphe est une personnification de la puissance.</p>
-						</div>
-					</div><!--/.col-lg-4 -->
+				<div class="row clearfix homer">
+					<?php
+					 // On récupère toutes les promos
+                    $reponse = $bdd->query('SELECT * FROM Promos');
+
+                    // On affiche chaque entrée une à une
+                    while ($donnees = $reponse->fetch())
+                    {
+                    ?>
+					<div style="width: 100%;height: 30px;">
+						<hr class="style-two" style="float: left;width: 45%;">
+						<h4 style="float: left;margin: 10px auto auto;width: 10%;text-align: center;">Promo <?php echo $donnees['year'] ?></h4>
+						<hr class="style-two" style="float: left;width: 45%;">
+					</div>
+					<div style="clear:both"></div>
+					<?php 
+						$reponse2 = $bdd->query('SELECT * FROM Students WHERE promo='.$donnees['year']);
+						$compteur=0;
+                    	// On affiche chaque entrée une à une
+                    	while ($donnees2 = $reponse2->fetch())
+                    	{
+                    		$compteur ++ ;
+                    ?>
+                    	<div class="col-md-3 col-sm-3 profil">	
+							<div class="single-profile wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+								<div class="media">
+									<div class="pull-left blc-img-prof">
+										<a href="#"><img class="media-object" src="img/promo/2015/<?php echo $compteur?>.jpg" width="328" alt=""></a>
+									</div>
+									<div class="media-body">
+										<h4><?php echo $donnees2['lastname'] ?> </h4>
+										<ul class="tag clearfix">
+											<?php
+												$technos = $donnees2["technos"];
+	                                            $keywords = preg_split("/[\s,]+/", $technos);
+	                                            foreach ($keywords as &$value) {
+	                                            	echo '<li class="btn"><a href="#">'; echo $value ; echo '</a></li>';   
+	                                            }
+                                             ?>
+										</ul>
+										<ul class="social_icons">
+											<li><a href="mailto:<?php echo $donnees2['email'] ?>"><i class="fa fa-envelope-o"></i></a></li> 
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+											<li><a href="#"><i class="fa fa-github"></i></a></li>  
+										</ul>
+									</div>
+								</div><!--/.media -->
+								<p>un mec parfait avec plein de défauts..... je suis iremplacablement inutile a la société ...
+	Rodolphe est une personnification de la puissance.</p>
+							</div>
+						</div><!--/.col-lg-4 -->
+					<?php
+						}
+					} 
+					?>
+					 
+					
 				</div>
 			</div><!--section-->
 		</div><!--/.container-->
