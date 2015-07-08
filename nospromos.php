@@ -69,6 +69,7 @@ include ("../bdd/localhostpdo/_mysql.php");
 									<div class="pull-left blc-img-prof">
 										<a href="#"><img class="media-object" src="img/promo/<?php echo $donnees['year'] ?>/<?php echo $donnees2['picture'] ?>.jpg" width="328" alt=""></a>
 									</div>
+									<div style="clear:both"></div>
 									<div class="media-body">
 										<h4 style="margin-top: 10px;"><?php echo $donnees2['lastname'] ?> <?php echo $donnees2['firstname'] ?></h4>
 										<ul class="tag clearfix">
