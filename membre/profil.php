@@ -169,7 +169,7 @@
                                                                                             else{ echo '';};
 
                                                                                             if(!empty($donnees["linkedin"])){
-                                                                                                echo '<a href="'; echo $donnees["linkedin"];echo '"><i  class="sociaux fa fa-linkedin-square fa-2x"></i></a>';} 
+                                                                                                echo '<a href="https://www.linkedin.com/pub/'; echo $donnees["linkedin"];echo '"><i  class="sociaux fa fa-linkedin-square fa-2x"></i></a>';} 
                                                                                             else{ echo '';};
                                                                                         
                                                                                         echo '

@@ -18,7 +18,6 @@
               $compteur ++;
               $req = $bdd->prepare("UPDATE Students SET firstname=:firstname, lastname=:lastname, picture=:picture, technos=:technos, describ=:describ, facebook=:facebook, twitter=:twitter, linkedin=:linkedin, github=:github, email=:email, promo=:promo WHERE idstudent=:idstudent AND promo=".$_GET['year']);
               $req->execute(array(
-            "id" => "",
             "idstudent" => $compteur,
             "firstname" => $_POST['firstname'.$compteur],
             "lastname" => $_POST['lastname'.$compteur],

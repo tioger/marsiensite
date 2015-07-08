@@ -36,7 +36,7 @@ include ("../bdd/localhostpdo/_mysql.php");
         <div class="container">
 			<div class="team">
 				<div class="center wow fadeInDown">
-					<h2>Nos Nollaborateurs</h2>
+					<h2>Nos Collaborateurs</h2>
 					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
 				</div>
 
@@ -67,30 +67,74 @@ include ("../bdd/localhostpdo/_mysql.php");
 							<div class="single-profile wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
 								<div class="media">
 									<div class="pull-left blc-img-prof">
-										<a href="#"><img class="media-object" src="img/promo/<?php echo $donnees['year'] ?>/<?php echo $compteur?>.jpg" width="328" alt=""></a>
+										<a href="#"><img class="media-object" src="img/promo/<?php echo $donnees['year'] ?>/<?php echo $donnees2['picture'] ?>.jpg" width="328" alt=""></a>
 									</div>
 									<div class="media-body">
-										<h4><?php echo $donnees2['lastname'] ?> </h4>
+										<h4 style="margin-top: 10px;"><?php echo $donnees2['lastname'] ?> <?php echo $donnees2['firstname'] ?></h4>
 										<ul class="tag clearfix">
 											<?php
+											if(!empty($donnees2["technos"])){
 												$technos = $donnees2["technos"];
 	                                            $keywords = preg_split("/[\s,]+/", $technos);
 	                                            foreach ($keywords as &$value) {
 	                                            	echo '<li class="btn"><a href="#">'; echo $value ; echo '</a></li>';   
 	                                            }
+	                                        }
+	                                        else{
+	                                        	echo "";
+	                                        }
                                              ?>
 										</ul>
 										<ul class="social_icons">
-											<li><a href="mailto:<?php echo $donnees2['email'] ?>"><i class="fa fa-envelope-o"></i></a></li> 
-											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-											<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-											<li><a href="#"><i class="fa fa-github"></i></a></li>  
+											<?php 
+												if(!empty($donnees2['email'])){
+													echo '<li><a href="mailto:';echo $donnees2['email']; echo '"><i class="fa fa-envelope-o"></i></a></li>';
+												}
+												else{
+													echo "";
+												}
+
+												if(!empty($donnees2['facebook'])){
+													echo '<li><a href="https://www.facebook.com/';echo $donnees2['facebook']; echo '"><i class="fa fa-facebook"></i></a></li>';
+												}
+												else{
+													echo "";
+												}
+
+												if(!empty($donnees2['twitter'])){
+													echo '<li><a href="https://twitter.com/';echo $donnees2['twitter']; echo '"><i class="fa fa-twitter"></i></a></li>';
+												}
+												else{
+													echo "";
+												}
+
+												if(!empty($donnees2['linkedin'])){
+													echo '<li><a href="https://www.linkedin.com/pub/';echo $donnees2['linkedin']; echo '"><i class="fa fa-linkedin"></i></a></li>';
+												}
+												else{
+													echo "";
+												}
+
+												if(!empty($donnees2['github'])){
+													echo '<li><a href="https://github.com/';echo $donnees2['github']; echo '"><i class="fa fa-github"></i></a></li>';
+												}
+												else{
+													echo "";
+												}
+											 ?>
 										</ul>
 									</div>
 								</div><!--/.media -->
-								<p>un mec parfait avec plein de défauts..... je suis iremplacablement inutile a la société ...
-	Rodolphe est une personnification de la puissance.</p>
+								<p>
+									<?php 
+										if(!empty($donnees2['describ'])){
+													echo $donnees2['describ'];
+										}
+										else{
+											echo "";
+										}
+								 	?>
+								</p>
 							</div>
 						</div><!--/.col-lg-4 -->
 					<?php
