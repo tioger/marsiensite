@@ -67,7 +67,7 @@
                                 <li><a href="recrutez.php">Recrutez</a></li>
                             </ul>
                         </li>
-                        <li><a href="partenaires.php">Partenaires</a></li>
+                        <!--<li><a href="partenaires.php">Partenaires</a></li>-->
                         <li><a href="contact-us.php">Contact</a></li>
                         <?php
                             if(isset($_SESSION['login'])){
