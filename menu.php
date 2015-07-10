@@ -40,7 +40,7 @@
                     <a class="navbar-brand" href="index.php"><img src="img/logosom.png" alt="logo"></a>
                 </div>
 				
-                <div class="collapse navbar-collapse navbar-right margo">
+                <div class="collapse navbar-collapse navbar-right margo" style="margin-right: 200px !important;">
                     <ul class="nav navbar-nav">
                         <li class="fuck-off fa-2x"><a href="./"><i class="fa fa-home"></i></a></li>
                         <li class="dropdown">
@@ -54,10 +54,10 @@
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown">Ecosystème<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="http://simplon.co/" target="blank">Simplon.Co</a></li>
+                                <li><a href="simplon.php" >Simplon.Co</a></li>
                                 <li><a href="centrale.php">Centrale</a></li>
-                                <li><a href="marseilleS.php">Marseille Solution</a></li>
-                                <li><a href="castleG.php">Chateau Gombert</a></li>
+                                <li><a href="marseillesolution.php">Marseille Solution</a></li>
+                                <li><a href="technopole.php">Chateau Gombert</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
