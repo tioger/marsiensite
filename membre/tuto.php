@@ -115,11 +115,20 @@
                                             {
                                         ?>
                                         <div id="tutocadre">
-                                            <p><span class="underline">Nom du Tuto :</span> <?php echo utf8_decode($donnees['name']); ?>  <span class="underline">Créé par</span> <i class='fa fa-fw fa-user'></i><span id="capitalize"> <?php echo $donnees['author']; ?></span> </p>
-                                            <p class="underline">Courte Description :</p>
-                                            <p class="shortdescribmargin"><?php echo utf8_decode($donnees['shortdescrib']); ?></p>
-                                            <a href="tuto/tutotemplate.php?tuto=<?php echo $donnees['id']; ?>">Voir le Tuto.</a>
-                                            <div id="<?php echo $donnees['language']; ?>"></div>
+                                            <div class="row bloc-info">
+                                                <div class="col-lg-7 col-sm-9 cont-info">
+                                                    <p><span class="underline">Nom du Tuto :</span> <?php echo utf8_decode($donnees['name']); ?></p>  
+                                                    <p><span class="underline">Créé par</span> <i class='fa fa-fw fa-user'></i><span id="capitalize"> <?php echo $donnees['author']; ?></span></p>
+                                                    <p class="underline">Courte Description :</p>
+                                                    <p class="shortdescribmargin"><?php echo utf8_decode($donnees['shortdescrib']); ?></p>
+                                                    <a href="tuto/tutotemplate.php?tuto=<?php echo $donnees['id']; ?>">Voir le Tuto.</a>
+                                                </div>
+                                                <div class="col-lg-1 col-sm-1 cont-info">
+                                                </div>
+                                                <div class="col-lg-4 col-sm-2 cont-info">
+                                                    <div id="<?php echo $donnees['language']; ?>" class="ico-lang"></div>
+                                                </div>
+                                            </div>
                                             <div class="clear"></div>
                                         </div>
                                         <?php

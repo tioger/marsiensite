@@ -67,86 +67,69 @@
   padding: 10px;
   background-color: rgb(221, 221, 221);
   margin-top: 20px;
+  height:210px;
+}
+@media screen and (min-width: 768px) and (max-width: 800px){
+  #tutocadre{
+  height:230px;
+}
+}
+@media screen and (max-width: 767px){
+  #tutocadre{
+  height:300px;
+}
+}
+.bloc-info{
+  height:100%;
 }
 
-#tutocadre a{
-  
+#tutocadre .bloc-info .cont-info .ico-lang{
+  width:100px;
+  height: 100px;
+  background-size: 100% 100%;
+}
+@media screen and (min-width: 768px){
+#tutocadre .bloc-info .cont-info .ico-lang{
+  float: right;
+  margin-top: 45px;
+  margin-right: 15px;
+}
+}
+@media screen and (max-width: 767px){
+#tutocadre .bloc-info .cont-info .ico-lang{
+  margin: auto;
+}
 }
 #HtmlCss {
   background-image:url(../img/html5_css3.png);
-  width:100px;
-  height: 100px;
-  background-size: 100% 100%;
-  float: right;
-  margin-top: -58px;
 }
 #C {
   background-image:url(../img/c.gif);
-  width:100px;
-  height: 100px;
-  background-size: 100% 100%;
-  float: right;
-  margin-top: -58px;
 }
 #Cplusplus {
   background-image:url(../img/c++.png);
-  width:100px;
-  height: 100px;
-  background-size: 100% 100%;
-  float: right;
-  margin-top: -58px;
 }
 #Javascript {
   background-image:url(../img/js.png);
-  width:100px;
-  height: 100px;
-  background-size: 100% 100%;
-  float: right;
-  margin-top: -58px;
 }
 #Jquery {
   background-image:url(../img/jquery.png);
-  width:100px;
-  height: 100px;
-  background-size: 100% 100%;
-  float: right;
-  margin-top: -58px;
 }
 #PHP {
   background-image:url(../img/php.jpeg);
-  width:100px;
-  height: 100px;
-  background-size: 100% 100%;
-  float: right;
-  margin-top: -58px;
 }
 #Python {
   background-image:url(../img/python.png);
-  width:100px;
-  height: 100px;
-  background-size: 100% 100%;
-  float: right;
-  margin-top: -58px;
 }
 #Ruby {
   background-image:url(../img/ruby.png);
-  width:100px;
-  height: 100px;
-  background-size: 100% 100%;
-  float: right;
-  margin-top: -58px;
 }
 #RubyonRails {
   background-image:url(../img/rails.jpg);
-  width:100px;
-  height: 100px;
-  background-size: 100% 100%;
-  float: right;
-  margin-top: -58px;
 }
 .underline {
   text-decoration:underline;
 }
 .shortdescribmargin{
-  margin-left: 130px;
+  margin-left: 20px;
 }
