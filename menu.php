@@ -1,3 +1,6 @@
+<?php
+    session_start(); 
+?>
 <link rel="stylesheet" href="css/login.css" type="text/css" />
 <link rel="stylesheet" href="css/nospromos.css" type="text/css" />
 <header id="header">
@@ -66,26 +69,38 @@
                         </li>
                         <li><a href="partenaires.php">Partenaires</a></li>
                         <li><a href="contact-us.php">Contact</a></li>
-                        <li class="menutest" id="menu1">
+                        <?php
+                            if(isset($_SESSION['login'])){
+                                echo'
+                                <li class="menutest" id="menu1">
+                                    <a class="account" href="membre/index.php">
+                                       Espace Membre 
+                                    </a>
+                                </li> ';  
+                            }
+                            else{
+                                echo'<li class="menutest" id="menu1">
                             <a class="account">
                                Login
                                 <i class="fa fa-angle-down"></i>
                             </a>
                             <div class="submenu">
                                 <form style="margin: 0px" accept-charset="UTF-8" action="index.php" method="post">
-                                    <fieldset class='textbox' style="padding:10px">
+                                    <fieldset class="textbox" style="padding:10px">
                                        <input style="margin-top: 8px; width: 157px;" type="text" name="login" placeholder="Username" />
                                        <input style="margin-top: 8px; width: 157px;" type="password" name="pass" placeholder="Passsword" />
                                        <input class="btn-primary" name="connexion" type="submit" value="Connexion" />
                                     </fieldset>
                                 </form>
-                                <p id="errormsg">
-                                    <?php
+                                <p id="errormsg">';
                                         if (isset($erreur)) echo '<br /><br />',$erreur;
-                                    ?>
-                                </p>
+                                echo'</p>
                             </div>
-                        </li>                       
+                        </li> ';
+                            }
+
+                        ?>
+                                              
                     </ul>
                 </div>
             </div><!--/.container-->

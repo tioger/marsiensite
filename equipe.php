@@ -33,8 +33,7 @@
         <div class="container">
 			<div class="team">
 				<div class="center wow fadeInDown">
-					<h2>Nos Nollaborateurs</h2>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+					<h2>Notre Equipe</h2>
 				</div>
 
 				<div class="row clearfix">	
@@ -51,7 +50,7 @@
 										<li class="btn"><a href="#">Web</a></li>
 										<li class="btn"><a href="#">Ui</a></li>
 										<li class="btn"><a href="#">Ux</a></li>
-										<li class="btn"><a href="#">Photoshop</a></li>
+										<li class="btn"><a href="#">Ruby</a></li>
 									</ul>
 									<ul class="social_icons">
 										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -60,7 +59,7 @@
 									</ul>
 								</div>
 							</div><!--/.media -->
-							<p>Un mec parfait avec plein de défauts..... Je suis iremplacablement inutile a la société ...
+							<p>Un mec parfait avec plein de défauts..... Il est irremplaçablement inutile a la société ...
 Rodolphe est une personnification de la puissance.</p>
 						</div>
 					</div><!--/.col-lg-4 -->	
@@ -75,17 +74,7 @@ Rodolphe est une personnification de la puissance.</p>
 								<div class="media-body">
 									<h4>Mathilde</h4>
 									<h5>Chapeauteuse de Projets</h5>
-									<ul class="tag clearfix">
-										<li class="btn"><a href="#"></a></li>
-										<li class="btn"><a href="#"></a></li>
-										<li class="btn"><a href="#"></a></li>
-										<li class="btn"><a href="#"></a></li>
-									</ul>
-									<ul class="social_icons">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li> 
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
+									
 								</div>
 							</div><!--/.media -->
 							<p></p>
@@ -118,17 +107,8 @@ Rodolphe est une personnification de la puissance.</p>
 								<div class="media-body">
 									<h4>Guillaume</h4>
 									<h5></h5>
-									<ul class="tag clearfix">
-										<li class="btn"><a href="#"></a></li>
-										<li class="btn"><a href="#"></a></li>
-										<li class="btn"><a href="#"></a></li>
-										<li class="btn"><a href="#"></a></li>
-									</ul>
-									<ul class="social_icons">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li> 
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
+									
+									
 								</div>
 							</div><!--/.media -->
 							<p></p>
@@ -143,17 +123,7 @@ Rodolphe est une personnification de la puissance.</p>
 								<div class="media-body">
 									<h4>Laeticia</h4>
 									<h5>Scrib Digital</h5>
-									<ul class="tag clearfix">
-										<li class="btn"><a href="#"></a></li>
-										<li class="btn"><a href="#"></a></li>
-										<li class="btn"><a href="#"></a></li>
-										<li class="btn"><a href="#"></a></li>
-									</ul>
-									<ul class="social_icons">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li> 
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
+									
 								</div>
 							</div><!--/.media -->
 							<p></p>

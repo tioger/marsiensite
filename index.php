@@ -237,14 +237,14 @@ Leurs parcours scolaires ont souvent été marqués par des orientations précoc
     <section id="partner">
         <div class="container">
             <div class="center wow fadeInDown">
-                <h2>Our Partners</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <h2>Nos Partenaire</h2>
+                
             </div>    
 
             <div class="partners">
                 <ul>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="img/pref.jpg"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="img/paca.jpg"></a></li>
+                    <li style="margin-left: 15%;"><a href="http://www.bouches-du-rhone.gouv.fr/"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="img/prefe.jpg"></a></li>
+                    <li style="width: 40%; float: right; margin-top: 45px; margin-right: 10%;"><a href="http://www.regionpaca.fr/"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="img/region.png"></a></li>
                 </ul>
             </div>        
         </div><!--/.container-->

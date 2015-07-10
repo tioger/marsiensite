@@ -4,7 +4,7 @@
     header ('Location: ../index.php');
     exit();
     }
-    ?>
+?>
     
 
 <html lang="en">

@@ -36,8 +36,7 @@ include ("../bdd/localhostpdo/_mysql.php");
         <div class="container">
 			<div class="team">
 				<div class="center wow fadeInDown">
-					<h2>Nos Collaborateurs</h2>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+					<h2>Nos Promos</h2>
 				</div>
 
 				<div class="row clearfix homer">
@@ -64,7 +63,7 @@ include ("../bdd/localhostpdo/_mysql.php");
                     		$compteur ++ ;
                     ?>
                     	<div class="col-md-3 col-sm-3 profil">	
-							<div class="single-profile wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+							<div class="single-profile wow fadeInDown" style="height: 571px;" data-wow-duration="1000ms" data-wow-delay="300ms">
 								<div class="media">
 									<div class="pull-left blc-img-prof">
 										<a href="#"><img class="media-object" src="img/promo/<?php echo $donnees['year'] ?>/<?php echo $donnees2['picture'] ?>.jpg" width="328" alt=""></a>
@@ -132,7 +131,7 @@ include ("../bdd/localhostpdo/_mysql.php");
 													echo $donnees2['describ'];
 										}
 										else{
-											echo "";
+											echo "Jeune, dynamique et motivé contactez moi pour  apprécier au mieux mes compétences ! ";
 										}
 								 	?>
 								</p>
