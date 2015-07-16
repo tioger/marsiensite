@@ -6,21 +6,33 @@
     }
 ?>
 <?php 
-include ("../../../bdd/localhostpdo/_mysql.php");
+  include ("../../../bdd/localhostpdo/_mysql.php");
   if(isset($_POST['creer']) && $_POST['creer'] == 'Créer'){
-        // On récupère tout le contenu de la table commentary
-              $req = $bdd->prepare("INSERT INTO Promos(id, year, nbparticipant) VALUES(:id, :year, :nbparticipant)");
-          $req->execute(array(
-            "id" => "",
-            "year" => $_POST['year'],
-            "nbparticipant" => $_POST['nbparticipant']));
-           header('Location: createpromo.php?year='.$_POST['year']);
-          exit();
-            }
-        
-       
-    
- ?>
+    // On récupère tout le contenu de la table commentary
+    $req = $bdd->prepare("INSERT INTO Promos(id, year, nbparticipant) VALUES(:id, :year, :nbparticipant)");
+    $req->execute(array(
+      "id" => "",
+      "year" => $_POST['year'],
+      "nbparticipant" => $_POST['nbparticipant']));
+     header('Location: createpromo.php?year='.$_POST['year']);
+    exit();
+  }
+?>
+<?php 
+  if(isset($_POST['delete']) && $_POST['delete'] == 'Supprimer'){
+    $req = $bdd->prepare("DELETE FROM Students WHERE promo= :promo");
+    $req->execute(array(
+        'promo' => $_POST['year']
+        ));
+    $req2 = $bdd->prepare("DELETE FROM Promos WHERE year= :year");
+    $req2->execute(array(
+        'year' => $_POST['year']
+        ));
+    header('Location: promos.php');
+    exit();
+
+  }
+?>
 <html lang="fr">
 
 <head>
@@ -111,18 +123,39 @@ include ("../../../bdd/localhostpdo/_mysql.php");
                           <!-- Debut Boucle pour affichage des membres-->
                           <?php  
                             include ("../../../bdd/localhostpdo/_mysql.php");
-                             
+                             $compteurdel = 0;
                             // On récupère tout le contenu de la table commentary
                             $reponse = $bdd->query("SELECT * FROM Promos ORDER BY ID ");
                             while ($donnees = $reponse->fetch())
                             {
+                              $compteurdel ++;
                           ?>
                           <tr>
                             <td><?php echo $donnees['year'] ?></td>
                             <td><?php echo $donnees['nbparticipant'] ?></td>
                             <td>
                                 <a href="editpromo.php?year=<?php echo $donnees['year'] ?>"><i class="fa fa-pencil"></i></a>
-                                <a href="#myModal" role="button" data-toggle="modal"><i class="fa fa-times"></i></a>
+                                <a href="#myModal<?php echo $compteurdel ; ?>" role="button" data-toggle="modal"><i class="fa fa-times"></i></a>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal<?php echo $compteurdel ; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <form method="POST" action="promos.php">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Annuler"><span aria-hidden="true">&times;</span></button>
+                                          <h4 class="modal-title" id="myModalLabel">Confirmer la suppression de la promo <?php echo $donnees['year'] ?> </h4>
+                                        </div>
+                                        
+                                        <div class="modal-footer" style="text-align: center !important;">
+                                          <input type="hidden" name="year" value="<?php echo $donnees['year'] ?>">
+                                          <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                          <input type="submit"  name="delete" value="Supprimer" class="btn btn-primary">
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
                             </td>
                           </tr>
                           <?php

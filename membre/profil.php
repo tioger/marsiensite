@@ -88,9 +88,6 @@
                                                                     <div style="float:left;width:330px">
                                                                         <h3 class="panel-title" style="color:black;text-align:center">'; if(!empty($donnees["lastname"])){ echo $donnees["lastname"];} else{ echo "Nom : NC  ";};echo ' '; if(!empty($donnees["firstname"])){ echo $donnees["firstname"];} else{ echo "Prénom : NC  ";}; echo'</h3>
                                                                     </div>
-                                                                    <div style="float:right;">
-                                                                        <a href="edit.html" >Edit Profile</a>
-                                                                    </div>
                                                                     <div style="clear:both;"></div>
                                                                 </div>
                                                                 <div class="panel-body">
@@ -192,8 +189,7 @@
                                                                 <div class="panel-footer">
                                                                     <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
                                                                     <span class="pull-right">
-                                                                        <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
-                                                                        <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                                                                        <a href="editprofil.php" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
                                                                     </span>
                                                                 </div>   
                                                             </div> 
@@ -233,9 +229,6 @@
                                                                 <div class="panel-heading" >
                                                                     <div style="float:left;width:330px">
                                                                         <h3 class="panel-title" style="color:black;text-align:center">'; if(!empty($donnees["lastname"])){ echo $donnees["lastname"];} else{ echo "Nom : NC  ";};echo ' '; if(!empty($donnees["firstname"])){ echo $donnees["firstname"];} else{ echo "Prénom : NC  ";}; echo'</h3>
-                                                                    </div>
-                                                                    <div style="float:right;">
-                                                                        <a href="edit.html" >Edit Profile</a>
                                                                     </div>
                                                                     <div style="clear:both;"></div>
                                                                 </div>
@@ -338,8 +331,7 @@
                                                                 <div class="panel-footer">
                                                                     <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
                                                                     <span class="pull-right">
-                                                                        <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
-                                                                        <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                                                                        <a href="editprofil.php" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
                                                                     </span>
                                                                 </div>   
                                                             </div> 

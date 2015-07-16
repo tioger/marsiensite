@@ -32,6 +32,8 @@
             $req->bindParam(":variableA", $variableA);
             $req->bindParam(":variableB", $variableB);
             $req->execute();
+            header('Location: editprofil.php');
+            exit();
         }
         $reponse->closeCursor();
     }
@@ -74,12 +76,32 @@
             exit();
         }
         else{
-            $variableA = $_POST['imgprofil'];
+            $variableA = $_POST["email"];
             $variableB = $_SESSION["login"];
-            $req = $bdd->prepare("UPDATE membre SET imgprofil = :variableA WHERE login = :variableB");
+            $variableC = $_POST["describ"];
+            $variableD = $_POST["technos"];
+            $variableE = $_POST["structure"];
+            $variableF = $_POST["promo"];
+            $variableG = $_POST["facebook"];
+            $variableH = $_POST["twitter"];
+            $variableI = $_POST["linkedin"];
+            $variableJ = $_POST["lastname"];
+            $variableK = $_POST["firstname"];
+            $req = $bdd->prepare("UPDATE membre SET email = :variableA , describ = :variableC , technos = :variableD , structure = :variableE , promo = :variableF ,facebook = :variableG , twitter = :variableH , linkedin = :variableI ,lastname = :variableJ , firstname = :variableK WHERE login = :variableB");
             $req->bindParam(":variableA", $variableA);
             $req->bindParam(":variableB", $variableB);
+            $req->bindParam(":variableC", $variableC);
+            $req->bindParam(":variableD", $variableD);
+            $req->bindParam(":variableE", $variableE);
+            $req->bindParam(":variableF", $variableF);
+            $req->bindParam(":variableG", $variableG);
+            $req->bindParam(":variableH", $variableH);
+            $req->bindParam(":variableI", $variableI);
+            $req->bindParam(":variableJ", $variableJ);
+            $req->bindParam(":variableK", $variableK);
             $req->execute();
+            header('Location: editprofil.php');
+            exit();
         }
         $reponse->closeCursor();
     }
@@ -243,7 +265,7 @@
                                                                                                 if(!empty($donnees["email"])){
                                                                                                     echo $donnees["email"]; echo '">';
                                                                                                 } 
-                                                                                                else{ echo " NC  ";}; 
+                                                                                                else{ echo ' NC  ">';}; 
                                                                                           echo '</td>
                                                                                             </tr>
                                                                                             
@@ -397,8 +419,8 @@
                                                                                                 if(!empty($donnees["email"])){
                                                                                                     echo $donnees["email"]; echo '">';
                                                                                                 } 
-                                                                                                else{ echo " NC  ";}; 
-                                                                                          echo '</td>
+                                                                                                else{ echo ' NC  ">';}; 
+                                                                                          echo '></td>
                                                                                             </tr>
                                                                                             
                                                                                             <td>

@@ -1,10 +1,21 @@
 <?php
-    session_start();
-    if (!isset($_SESSION['admin'])) {
-    header ('Location: ../index.php');
+  session_start();
+  if (!isset($_SESSION['admin'])) {
+  header ('Location: ../index.php');
+  exit();
+  }
+?>
+<?php 
+  include ("../../../bdd/localhostpdo/_mysql.php");
+  if(isset($_POST['delete']) && $_POST['delete'] == 'Supprimer'){
+    $req = $bdd->prepare("DELETE FROM commentary WHERE id= :id");
+    $req->execute(array(
+        'id' => $_POST['id']
+        ));
+    header('Location: commentlist.php');
     exit();
-    }
-    ?>
+  }
+?>
 <html lang="fr">
 
 <head>
@@ -66,11 +77,12 @@
                           <!-- Debut Boucle pour affichage des membres-->
                           <?php  
                             include ("../../../bdd/localhostpdo/_mysql.php");
-                             
+                            $compteurdel = 0;
                             // On récupère tout le contenu de la table commentary
                             $reponse = $bdd->query("SELECT * FROM commentary ORDER BY ID ");
                             while ($donnees = $reponse->fetch())
                             {
+                              $compteurdel ++;
                           ?>
                           <tr>
                             <td><?php echo $donnees['id'] ?></td>
@@ -78,8 +90,27 @@
                             <td><a href="../tuto/tutotemplate.php?tuto=<?php echo $donnees['tutoid'] ?>">Acceder au tuto</a></td>
                             <td><?php echo $donnees['comment'] ?></td>
                             <td>
-                                <a href="user.html"><i class="fa fa-pencil"></i></a>
-                                <a href="#myModal" role="button" data-toggle="modal"><i class="fa fa-times"></i></a>
+                                
+                                <a href="#myModal<?php echo $compteurdel ; ?>" role="button" data-toggle="modal"><i class="fa fa-times"></i></a>
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal<?php echo $compteurdel ; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <form method="POST" action="commentlist.php">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Annuler"><span aria-hidden="true">&times;</span></button>
+                                          <h4 class="modal-title" id="myModalLabel">Confirmer la suppression du commentaire <?php echo $donnees['id'] ?> </h4>
+                                        </div>
+                                        
+                                        <div class="modal-footer" style="text-align: center !important;">
+                                          <input type="hidden" name="id" value="<?php echo $donnees['id'] ?>">
+                                          <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                          <input type="submit"  name="delete" value="Supprimer" class="btn btn-primary">
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
                             </td>
                           </tr>
                           <?php
@@ -91,19 +122,6 @@
                           <!-- Fin Boucle pour affichage des membres-->
                         </tbody>
                       </table>
-                  </div>
-                  <div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                      <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                          <h3 id="myModalLabel">Confirmation de Suppression</h3>
-                      </div>
-                      <div class="modal-body">
-                          <p class="error-text">Etes vous sur de vouloir supprimer cet utilisateur?</p>
-                      </div>
-                      <div class="modal-footer">
-                          <button class="btn" data-dismiss="modal" aria-hidden="true">Annuler</button>
-                          <button class="btn btn-danger" data-dismiss="modal">Supprimer</button>
-                      </div>
                   </div>
               </div>
             </div>
