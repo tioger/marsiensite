@@ -5,6 +5,17 @@
     exit();
     }
 ?>
+<?php 
+  include ("../../../bdd/localhostpdo/_mysql.php");
+  if(isset($_POST['delete']) && $_POST['delete'] == 'Supprimer'){
+    $req = $bdd->prepare("DELETE FROM Students WHERE idstudent= :id");
+    $req->execute(array(
+        'id' => $_POST['idstudent']
+        ));
+    header('Location: editpromo.php?year='.$_GET['year']);
+    exit();
+  }
+?>
 <?php  
     include ("../../../bdd/localhostpdo/_mysql.php");
     if(isset($_POST['enregistrer']) && $_POST['enregistrer'] == 'Enregistrer'){
@@ -104,19 +115,17 @@
                                                             include ("../../../bdd/localhostpdo/_mysql.php");
                                                              
                                                             // On récupère tout le contenu de la table commentary
-                                                            $reponse = $bdd->query("SELECT * FROM Promos WHERE year=".$_GET['year']);
-                                                            while ($donnees = $reponse->fetch())
-                                                            {
                                                           ?>
                                                           <form method="post" action="editpromo.php?year=<?php echo $_GET['year']; ?>">
                                                               <?php 
-                                                                $nbparticipant = $donnees['nbparticipant'];
+                                                                
                                                                 $compteur = 0;
-                                                                while ($compteur != $nbparticipant) {
-                                                                  $compteur ++; 
-                                                                    $reponse = $bdd->query("SELECT * FROM Students WHERE idstudent=".$compteur." AND promo =".$_GET['year']);
+            
+                                                                  
+                                                                    $reponse = $bdd->query("SELECT * FROM Students WHERE promo =".$_GET['year']);
                                                                     while ($donnees2 = $reponse->fetch())
                                                                     {
+                                                                        $compteur ++; 
                                                                 ?>
                                                                     <div class="panel panel-info" style="margin-bottom: 0px;">
                                                                         
@@ -138,6 +147,11 @@
                                                                                        <i  class="sociaux fa fa-github-square fa-2x"></i> <input type="text" style="width: 200;" name="github<?php echo $compteur; ?>" value="<?php echo $donnees2['github']; ?>"><br>
                                                                                        </div>
                                                                                     <input type="hidden" name="promo" value="<?php echo $_GET['year']; ?>">
+                                                                                    <form method="post" action="editpromo.php?year=<?php echo $_GET['year']; ?>">
+                                                                                        <input type="hidden" name="idstudent" value="<?php echo $donnees2['idstudent'] ?>">
+                                                                                        <div style="clear:both;"></div>
+                                                                                        <input  style="float:right; margin-top:10px" type="submit" name="delete" value="Supprimer">
+                                                                                    </form>
                                                                                 </div>
                                                                                 <div style="clear:both;"></div>
                                                                             </div>
@@ -149,14 +163,10 @@
                                                                  <?php  
                                                                     }
                                                                  ?>
-                                                                <?php 
-                                                                  }
-                                                                ?>
+                                                                
                                                                 <input type="submit" name="enregistrer" value="Enregistrer">
                                                               </form>
-                                                            <?php 
-                                                              }
-                                                            ?>
+                                                            
                                                         </div> 
                                                     </div>
                                                 </div>
