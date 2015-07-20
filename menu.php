@@ -8,7 +8,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-xs-4">
-                        <div class="top-number"><p><i class="fa fa-envelope-o"></i>mathilde.chaboche@centrale-marseille.fr</p></div>
+                        <div class="top-number"><p><i class="fa fa-envelope-o"></i>simplonmars@centrale-marseille.fr</p></div>
                     </div>
                     <div class="col-sm-6 col-xs-8">
                        <div class="social">
@@ -46,6 +46,7 @@
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown">A propos<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
+                                <li><a href="formation.php">La Formation</a></li>
                                 <li><a href="equipe.php">Equipe</a></li>
                                 <li><a href="nospromos.php">Nos Promos</a></li>
                                 <li><a href="presse.php">Presse</a></li>
