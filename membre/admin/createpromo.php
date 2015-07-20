@@ -16,7 +16,7 @@
             $compteur = 0;
             while ($compteur != $nbparticipant) {
               $compteur ++;
-              $req = $bdd->prepare("INSERT INTO Students(id, idstudent, firstname, lastname, picture, technos, describ, facebook, twitter, linkedin, github, email, promo) VALUES(:id, :idstudent, :firstname, :lastname, :picture, :technos, :describ, :facebook, :twitter, :linkedin, :github, :email, :promo)");
+              $req = $bdd->prepare("INSERT INTO Students(id, idstudent, firstname, lastname, picture, technos, describ, facebook, twitter, linkedin, github, email, cv, promo) VALUES(:id, :idstudent, :firstname, :lastname, :picture, :technos, :describ, :facebook, :twitter, :linkedin, :github, :email, :cv, :promo)");
           $req->execute(array(
             "id" => "",
             "idstudent" => $compteur,
@@ -30,6 +30,7 @@
             "linkedin" => $_POST['linkedin'.$compteur],
             "github" => $_POST['github'.$compteur],
             "email" => $_POST['email'.$compteur],
+            "cv" => $_POST['cv'.$compteur],
             "promo" => $_POST['promo']));
             }
         }
@@ -138,13 +139,17 @@
                                                                                 <input type="hidden" name="promo" value="<?php echo $_GET['year'] ?>">
                                                                             </div>
                                                                             <div style="clear:both;"></div>
+                                                                            <div style="float:left">CV (nom du fichier sans l'extension .pdf) : <input  style="width: 400;" type="text" name="cv<?php echo $compteur; ?>" value=""></div>
+                                                                            <div style="clear:both;"></div>
                                                                         </div>
                                                                     </div>
                                                                  
                                                                 <?php 
                                                                   }
                                                                 ?>
-                                                                <input type="submit" name="enregistrer" value="Enregistrer">
+                                                                <div style="text-align: center;">
+                                                                    <input style="margin-top: 25px;" type="submit" class="btn btn-success" name="enregistrer" value="Enregistrer">
+                                                                </div>
                                                               </form>
                                                             <?php 
                                                               }

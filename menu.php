@@ -32,7 +32,7 @@
                     <a class="navbar-brand" href="index.php"><img style="margin-bottom: 10px;" src="img/logosom.png" alt="logo"></a>
                 </div>
 				
-                <div class="collapse navbar-collapse navbar-right margo" style="margin-right: 200px !important;">
+                <div class="collapse navbar-collapse navbar-right margo" style="margin-right: 155px !important;">
                     <ul class="nav navbar-nav">
                         <li class="fuck-off fa-2x"><a href="./"><i class="fa fa-home"></i></a></li>
                         <li class="dropdown">
@@ -40,9 +40,11 @@
                             <ul class="dropdown-menu">
                                 <li><a href="formation.php">La Formation</a></li>
                                 <li><a href="equipe.php">Equipe</a></li>
-                                <li><a href="nospromos.php">Nos Promos</a></li>
                                 <li><a href="presse.php">Presse</a></li>
                             </ul>
+                        </li>
+                        <li>
+                            <a href="nospromos.php">Nos Promos</a>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown">Ecosystème<i class="fa fa-angle-down"></i></a>
@@ -53,12 +55,8 @@
                                 <li><a href="technopole.php">Chateau Gombert</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown">Offres<i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="event.php">Evènement</a></li>
-                                <li><a href="recrutez.php">Recrutez</a></li>
-                            </ul>
+                        <li>
+                            <a href="recrutez.php">Recruter</a>
                         </li>
                         <!--<li><a href="partenaires.php">Partenaires</a></li>-->
                         <li><a href="contact-us.php">Contact</a></li>

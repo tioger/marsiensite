@@ -68,8 +68,8 @@
 
             <div class="partners">
                 <ul>
-                    <li style="margin-left: 15%;"><a href="http://www.bouches-du-rhone.gouv.fr/"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="img/prefe.jpg"></a></li>
-                    <li style="width: 40%; float: right; margin-top: 45px; margin-right: 10%;"><a href="http://www.regionpaca.fr/"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="img/region.png"></a></li>
+                    <li style="margin-left: 20%;"><a href="http://www.bouches-du-rhone.gouv.fr/"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="img/prefe.jpg"></a></li>
+                    <li style="width: 40%; float: right; margin-top: 45px;"><a href="http://www.regionpaca.fr/"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="img/region.png"></a></li>
                 </ul>
             </div>        
         </div><!--/.container-->

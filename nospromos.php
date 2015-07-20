@@ -55,7 +55,11 @@ include ("../bdd/localhostpdo/_mysql.php");
 					</div>
 					<div style="clear:both"></div>
 					<?php 
-						$reponse2 = $bdd->query('SELECT * FROM Students WHERE promo='.$donnees['year']);
+						$year = $donnees['year'];
+						$reponse2 = $bdd->prepare('SELECT * FROM Students WHERE promo= :year ORDER BY firstname');
+						$reponse2->execute(array(
+							':year' => $year
+							));
 						$compteur=0;
                     	// On affiche chaque entrée une à une
                     	while ($donnees2 = $reponse2->fetch())
@@ -63,7 +67,7 @@ include ("../bdd/localhostpdo/_mysql.php");
                     		$compteur ++ ;
                     ?>
                     	<div class="col-md-3 col-sm-3 profil">	
-							<div class="single-profile wow fadeInDown" style="height: 571px;" data-wow-duration="1000ms" data-wow-delay="300ms">
+							<div class="single-profile wow fadeInDown" style="height: 650px;" data-wow-duration="1000ms" data-wow-delay="300ms">
 								<div class="media">
 									<div class="pull-left blc-img-prof">
 										<a href="#"><img class="media-object" src="img/promo/<?php echo $donnees['year'] ?>/<?php echo $donnees2['picture'] ?>.jpg" width="328" alt=""></a>
@@ -71,6 +75,23 @@ include ("../bdd/localhostpdo/_mysql.php");
 									<div style="clear:both"></div>
 									<div class="media-body">
 										<h4 style="margin-top: 10px;"><?php echo $donnees2['lastname'] ?> <?php echo $donnees2['firstname'] ?></h4>
+										<ul class="social_icons">
+											<?php 
+												if(!empty($donnees2["cv"])){
+													echo '
+													<a style="color: white;" href="cv/'; echo $donnees['year']; echo'/';echo $donnees2['cv']; echo'.pdf">
+														<button type="button" class="btncv btn-block">Voir/Telechager son CV</button>
+													</a>';
+												}
+												else{
+													echo '
+													<a style="color: white;" href="mailto:'; echo $donnees2['email'];echo'">
+														<button type="button" class="btncv btn-block">Demander son CV</button>
+													</a>';
+												}
+											 ?>
+												
+										</ul>
 										<ul class="tag clearfix">
 											<?php
 											if(!empty($donnees2["technos"])){
@@ -123,6 +144,7 @@ include ("../bdd/localhostpdo/_mysql.php");
 												}
 											 ?>
 										</ul>
+										
 									</div>
 								</div><!--/.media -->
 								<p>

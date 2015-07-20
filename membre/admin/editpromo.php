@@ -27,7 +27,7 @@
             $compteur = 0;
             while ($compteur != $nbparticipant) {
               $compteur ++;
-              $req = $bdd->prepare("UPDATE Students SET firstname=:firstname, lastname=:lastname, picture=:picture, technos=:technos, describ=:describ, facebook=:facebook, twitter=:twitter, linkedin=:linkedin, github=:github, email=:email, promo=:promo WHERE idstudent=:idstudent AND promo=".$_GET['year']);
+              $req = $bdd->prepare("UPDATE Students SET firstname=:firstname, lastname=:lastname, picture=:picture, technos=:technos, describ=:describ, facebook=:facebook, twitter=:twitter, linkedin=:linkedin, github=:github, email=:email, cv=:cv, promo=:promo WHERE idstudent=:idstudent AND promo=".$_GET['year']);
               $req->execute(array(
             "idstudent" => $compteur,
             "firstname" => $_POST['firstname'.$compteur],
@@ -40,6 +40,7 @@
             "linkedin" => $_POST['linkedin'.$compteur],
             "github" => $_POST['github'.$compteur],
             "email" => $_POST['email'.$compteur],
+            "cv" => $_POST['cv'.$compteur],
             "promo" => $_POST['promo']));
             }
         }
@@ -139,34 +140,62 @@
                                                                                     <div style="float:right">Email: <input type="text" style="width: 400;" name="email<?php echo $compteur; ?>" value="<?php echo $donnees2['email']; ?>"></div><br>
                                                                                     <div style="clear:both;"></div>
                                                                                     <div style="float:left">
-                                                                                     <i  class="sociaux fa fa-facebook-square fa-2x"></i> <input type="text" style="width: 200;" name="facebook<?php echo $compteur; ?>" value="<?php echo $donnees2['facebook']; ?>">
-                                                                                     <i  class="sociaux fa fa-twitter-square fa-2x"></i> <input type="text" style="width: 200;" name="twitter<?php echo $compteur; ?>" value="<?php echo $donnees2['twitter']; ?>"><br>
-                                                                                     </div>
-                                                                                     <div style="float:right">
+                                                                                        <i  class="sociaux fa fa-facebook-square fa-2x"></i> <input type="text" style="width: 200;" name="facebook<?php echo $compteur; ?>" value="<?php echo $donnees2['facebook']; ?>">
+                                                                                        <i  class="sociaux fa fa-twitter-square fa-2x"></i> <input type="text" style="width: 200;" name="twitter<?php echo $compteur; ?>" value="<?php echo $donnees2['twitter']; ?>"><br>
+                                                                                    </div>
+                                                                                    <div style="float:right">
                                                                                        <i  class="sociaux fa fa-linkedin-square fa-2x"></i> <input type="text" style="width: 200;" name="linkedin<?php echo $compteur; ?>" value="<?php echo $donnees2['linkedin']; ?>">
                                                                                        <i  class="sociaux fa fa-github-square fa-2x"></i> <input type="text" style="width: 200;" name="github<?php echo $compteur; ?>" value="<?php echo $donnees2['github']; ?>"><br>
-                                                                                       </div>
+                                                                                    </div>
+                                                                                    <div style="clear:both;"></div>
+                                                                                    <div style="float:left">CV (nom du fichier sans l'extension .pdf) : <input  style="width: 400;" type="text" name="cv<?php echo $compteur; ?>" value="<?php echo $donnees2['cv']; ?>"></div>
                                                                                     <input type="hidden" name="promo" value="<?php echo $_GET['year']; ?>">
-                                                                                    <form method="post" action="editpromo.php?year=<?php echo $_GET['year']; ?>">
-                                                                                        <input type="hidden" name="idstudent" value="<?php echo $donnees2['idstudent'] ?>">
-                                                                                        <div style="clear:both;"></div>
-                                                                                        <input  style="float:right; margin-top:10px" type="submit" name="delete" value="Supprimer">
-                                                                                    </form>
+                                                                                    
+                                                                                    <a style="float:right; margin-top:10px" href="#myModal<?php echo $compteur ; ?>" role="button" data-toggle="modal"><button type="button" class="btn btn-danger">Supprimer</button></a>
                                                                                 </div>
                                                                                 <div style="clear:both;"></div>
                                                                             </div>
-                                                                            
-                                                                        
-                                                                        
-                                                                       
+                                                                          
                                                                     </div>
                                                                  <?php  
                                                                     }
                                                                  ?>
-                                                                
-                                                                <input type="submit" name="enregistrer" value="Enregistrer">
+                                                                <div style="text-align: center;">
+                                                                    <input style="margin-top: 25px;" type="submit" class="btn btn-success" name="enregistrer" value="Enregistrer">
+                                                                </div>
                                                               </form>
-                                                            
+                                                              <?php 
+                                                                
+                                                                $compteurdel = 0;
+            
+                                                                  
+                                                                    $reponse = $bdd->query("SELECT * FROM Students WHERE promo =".$_GET['year']);
+                                                                    while ($donnees3 = $reponse->fetch())
+                                                                    {
+                                                                        $compteurdel ++; 
+                                                                ?>
+                                                                        <!-- Modal suppression utilisateur-->
+                                                                    <div class="modal fade" id="myModal<?php echo $compteurdel ; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                                      <div class="modal-dialog" role="document">
+                                                                        <div class="modal-content">
+                                                                          <form method="POST" action="editpromo.php?year=<?php echo $_GET['year']; ?>">
+                                                                            <div class="modal-header">
+                                                                              <button type="button" class="close" data-dismiss="modal" aria-label="Annuler"><span aria-hidden="true">&times;</span></button>
+                                                                              <h4 class="modal-title" id="myModalLabel">Confirmer la suppression de <?php echo $donnees3['lastname'] ?> <?php echo $donnees3['firstname'] ?> ?</h4>
+                                                                            </div>
+                                                                            
+                                                                            <div class="modal-footer" style="text-align: center !important;">
+                                                                              <input type="hidden" name="idstudent" value="<?php echo $donnees3['idstudent'] ?>">
+                                                                              <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                                                              <input type="submit"  name="delete" value="Supprimer" class="btn btn-primary">
+                                                                            </div>
+                                                                          </form>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                <?php  
+                                                                    }
+                                                                ?>
                                                         </div> 
                                                     </div>
                                                 </div>
