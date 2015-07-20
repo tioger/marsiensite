@@ -109,35 +109,35 @@ include ("../bdd/localhostpdo/_mysql.php");
 										<ul class="social_icons">
 											<?php 
 												if(!empty($donnees2['email'])){
-													echo '<li><a href="mailto:';echo $donnees2['email']; echo '"><i class="fa fa-envelope-o"></i></a></li>';
+													echo '<li><a href="mailto:';echo $donnees2['email']; echo '" target="blank"><i class="fa fa-envelope-o"></i></a></li>';
 												}
 												else{
 													echo "";
 												}
 
 												if(!empty($donnees2['facebook'])){
-													echo '<li><a href="https://www.facebook.com/';echo $donnees2['facebook']; echo '"><i class="fa fa-facebook"></i></a></li>';
+													echo '<li><a href="https://www.facebook.com/';echo $donnees2['facebook']; echo '" target="blank"><i class="fa fa-facebook"></i></a></li>';
 												}
 												else{
 													echo "";
 												}
 
 												if(!empty($donnees2['twitter'])){
-													echo '<li><a href="https://twitter.com/';echo $donnees2['twitter']; echo '"><i class="fa fa-twitter"></i></a></li>';
+													echo '<li><a href="https://twitter.com/';echo $donnees2['twitter']; echo '" target="blank"><i class="fa fa-twitter"></i></a></li>';
 												}
 												else{
 													echo "";
 												}
 
 												if(!empty($donnees2['linkedin'])){
-													echo '<li><a href="https://www.linkedin.com/pub/';echo $donnees2['linkedin']; echo '"><i class="fa fa-linkedin"></i></a></li>';
+													echo '<li><a href="https://www.linkedin.com/pub/';echo $donnees2['linkedin']; echo '" target="blank"><i class="fa fa-linkedin"></i></a></li>';
 												}
 												else{
 													echo "";
 												}
 
 												if(!empty($donnees2['github'])){
-													echo '<li><a href="https://github.com/';echo $donnees2['github']; echo '"><i class="fa fa-github"></i></a></li>';
+													echo '<li><a href="https://github.com/';echo $donnees2['github']; echo '" target="blank"><i class="fa fa-github"></i></a></li>';
 												}
 												else{
 													echo "";
