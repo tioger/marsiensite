@@ -121,7 +121,7 @@ Rodolphe est une personnification de la puissance.</p>
 									<a href="#"><img class="media-object" src="img/staff/le.jpg" width="328" alt=""></a>
 								</div>
 								<div class="media-body">
-									<h4>Laeticia</h4>
+									<h4>Laetitia</h4>
 									<h5>Scrib Digital</h5>
 									
 								</div>

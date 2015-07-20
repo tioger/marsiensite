@@ -62,7 +62,7 @@
     <section id="partner">
         <div class="container">
             <div class="center wow fadeInDown">
-                <h2>Nos Partenaire</h2>
+                <h2>Nos Partenaires</h2>
                 
             </div>    
 

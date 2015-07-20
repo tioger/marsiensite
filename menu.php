@@ -7,21 +7,13 @@
         <div class="top-bar">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-xs-4">
-                        <div class="top-number"><p><i class="fa fa-envelope-o"></i>simplonmars@centrale-marseille.fr</p></div>
-                    </div>
-                    <div class="col-sm-6 col-xs-8">
+                    <div class="col-sm-12 col-xs-8">
                        <div class="social">
                             <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><p style="color:white">Nos Réseaux Sociaux : </p></li>
+                                <li><a href="mailto:simplonmars@centrale-marseille.fr"><i class="fa fa-envelope-o"></i></a></li>
                                 <li><a href="https://twitter.com/SIMPLonMARS" target="blank"><i class="fa fa-twitter"></i></a></li>
                             </ul>
-                            <div class="search">
-                                <form role="form">
-                                    <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                                    <i class="fa fa-search"></i>
-                                </form>
-                           </div>
                        </div>
                     </div>
                 </div>
@@ -37,7 +29,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img src="img/logosom.png" alt="logo"></a>
+                    <a class="navbar-brand" href="index.php"><img style="margin-bottom: 10px;" src="img/logosom.png" alt="logo"></a>
                 </div>
 				
                 <div class="collapse navbar-collapse navbar-right margo" style="margin-right: 200px !important;">
