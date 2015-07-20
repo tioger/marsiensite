@@ -51,7 +51,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="simplon.php" >Simplon.Co</a></li>
                                 <li><a href="centrale.php">Centrale</a></li>
-                                <li><a href="marseillesolution.php">Marseille Solution</a></li>
+                                <li><a href="marseillesolution.php">Marseille Solutions</a></li>
                                 <li><a href="technopole.php">Chateau Gombert</a></li>
                             </ul>
                         </li>

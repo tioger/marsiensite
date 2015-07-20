@@ -32,7 +32,7 @@
     <section id="contact-page">
         <div class="container" >
             <div class="center">        
-                <a href="http://www.marseille-solutions.fr/"><img style="margin-top: 80px;width: 328px;" src="img/mars.jpg"></a>
+                <a href="http://www.marseille-solutions.fr/" target="blank"><img style="margin-top: 80px;width: 328px;" src="img/mars.jpg"></a>
                 <h2>L'accelerateur d'idées !</h2>
             </div> 
             <div class="row contact-wrap">
@@ -40,7 +40,8 @@
                 <p style="width: 80%; margin: 80px auto;">
                     Marseille Solutions, c'est le premier Accélérateur d'optimisme.
                     Quelle ville mieux que Marseille pour l’inventer ?
-                    Nous sommes entrepreneurs, experts, professionnels engagés partageant une double passion : celle de Marseille et de l’intérêt général. 
+                    Nous sommes entrepreneurs, experts, professionnels engagés partageant une double passion : celle de Marseille et de l’intérêt général.
+                    <br><br><a href="http://www.marseille-solutions.fr/" target="blank">Visitez le site officiel</a> 
                 </p>
             </div><!--/.row-->
         </div><!--/.container-->

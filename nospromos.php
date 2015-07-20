@@ -79,13 +79,13 @@ include ("../bdd/localhostpdo/_mysql.php");
 											<?php 
 												if(!empty($donnees2["cv"])){
 													echo '
-													<a style="color: white;" href="cv/'; echo $donnees['year']; echo'/';echo $donnees2['cv']; echo'.pdf">
+													<a style="color: white;" href="cv/'; echo $donnees['year']; echo'/';echo $donnees2['cv']; echo'.pdf" target="blank">
 														<button type="button" class="btncv btn-block">Voir/Telechager son CV</button>
 													</a>';
 												}
 												else{
 													echo '
-													<a style="color: white;" href="mailto:'; echo $donnees2['email'];echo'">
+													<a style="color: white;" href="mailto:'; echo $donnees2['email'];echo'" target="blank">
 														<button type="button" class="btncv btn-block">Demander son CV</button>
 													</a>';
 												}

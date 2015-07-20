@@ -32,7 +32,7 @@
     <section id="contact-page">
         <div class="container" >
             <div class="center">        
-                <a href="http://www.simplon.co"><img style="margin-top: 80px;" src="img/simplon.png"></a>
+                <a href="http://www.simplon.co" target="blank"><img style="margin-top: 80px;" src="img/simplon.png"></a>
                 <h2>L'origine de Tout</h2>
             </div> 
             <div class="row contact-wrap">
@@ -40,7 +40,7 @@
                 <p style="width: 80%; margin: 80px auto;">
 Simplon.co ?<br>
 
-Simplon.co est une école, qui propose des formations intensives de six mois pour apprendre à créer des sites web, des applications web/mobile, et en faire son métier. La formation s’adresse prioritairement aux jeunes de moins de 25 ans, non diplômés ou peu diplômés, issus des quartiers populaires, des diasporas et des milieux ruraux, aux demandeurs d’emploi, aux allocataires du RSA ainsi qu’aux femmes,  populations insuffisamment représentées dans les métiers techniques. Elle est gratuite, ouverte à tous, pourvu que la motivation soit au rendez-vous !</p>
+Simplon.co est une école, qui propose des formations intensives de six mois pour apprendre à créer des sites web, des applications web/mobile, et en faire son métier. La formation s’adresse prioritairement aux jeunes de moins de 25 ans, non diplômés ou peu diplômés, issus des quartiers populaires, des diasporas et des milieux ruraux, aux demandeurs d’emploi, aux allocataires du RSA ainsi qu’aux femmes,  populations insuffisamment représentées dans les métiers techniques. Elle est gratuite, ouverte à tous, pourvu que la motivation soit au rendez-vous !<br><br><a href="http://www.simplon.co" target="blank">Visitez le site officiel</a></p>
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#contact-page-->

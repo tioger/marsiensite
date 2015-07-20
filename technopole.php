@@ -32,13 +32,13 @@
     <section id="contact-page">
         <div class="container" >
             <div class="center">        
-                <a href="http://www.technopole-marseille.com"><img style="margin-top: 80px;width: 328px;" src="img/techno.bmp"></a>
+                <a href="http://www.technopole-marseille.com" target="blank"><img style="margin-top: 80px;width: 328px;" src="img/techno.bmp"></a>
                 <h2>L'environnement propice !</h2>
             </div> 
             <div class="row contact-wrap">
                 <div><iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d23211.303248809134!2d5.44169275!3d43.347472950000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stechnopole+chateau+gombert!5e0!3m2!1sfr!2sfr!4v1436530995581" width="1277" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></div>
                 <p style="width: 80%; margin: 80px auto;">
-                    Le Technopôle Marseille Provence constitue, avec le Technopôle de Marseille Luminy et le Parc d'activités des Florides à Marignane, l'un des territoires privilégiés du développement économique de l'aire métropolitaine marseillaise. Il est le point de convergence du monde économique et des ressources académiques du Pôle de l’Etoile qui comprend les Campus de Saint-Jérôme et de Château- Gombert.
+                    Le Technopôle Marseille Provence constitue, avec le Technopôle de Marseille Luminy et le Parc d'activités des Florides à Marignane, l'un des territoires privilégiés du développement économique de l'aire métropolitaine marseillaise. Il est le point de convergence du monde économique et des ressources académiques du Pôle de l’Etoile qui comprend les Campus de Saint-Jérôme et de Château- Gombert.<br><br><a href="http://www.technopole-marseille.com" target="blank">Visitez le site officiel</a></p>
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#contact-page-->
